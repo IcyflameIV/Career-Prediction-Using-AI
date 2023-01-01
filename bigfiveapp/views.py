@@ -78,14 +78,71 @@ def formInfo(request):
     #                 OPN1,OPN2,OPN3,OPN4,OPN5,OPN6,OPN7,OPN8,OPN9,OPN10])
     if ans[0]==0:
         ans = 'EXT'
+        val1 = 'eg'
+        val2 = 'dd'
+        val3 = ''
+        val4 = ''
+        val5 = ''
+        val6 = ''
+        val7 = ''
+        val8 = ''
+        val9 = ''
+        val10 = ''
     elif ans[0]==1:
         ans = 'EST'
+        val1 = 'eg'
+        val2 = 'dd'
+        val3 = ''
+        val4 = ''
+        val5 = ''
+        val6 = ''
+        val7 = ''
+        val8 = ''
+        val9 = ''
+        val10 = ''
     elif ans[0]==2:
         ans = 'AGR'
+        val1 = 'eg'
+        val2 = 'dd'
+        val3 = ''
+        val4 = ''
+        val5 = ''
+        val6 = ''
+        val7 = ''
+        val8 = ''
+        val9 = ''
+        val10 = ''
     elif ans[0]==3:
         ans = 'CSN'
+        val1 = 'eg'
+        val2 = 'dd'
+        val3 = ''
+        val4 = ''
+        val5 = ''
+        val6 = ''
+        val7 = ''
+        val8 = ''
+        val9 = ''
+        val10 = ''
+    elif ans[0]==4:
+        ans = 'CSN'
+        val1 = 'eg'
+        val2 = 'dd'
+        val3 = ''
+        val4 = ''
+        val5 = ''
+        val6 = ''
+        val7 = ''
+        val8 = ''
+        val9 = ''
+        val10 = ''
     else:
-        ans =  'OPN'
+        ans =  'Error !!! , The data is not entered correctly' 
+
+       
         
-        
-    return render(request, 'result.html',{'result' : ans})
+    return render(request, 'result.html',{'result' : ans,
+    'pred1': val1, 'pred2':val2
+    })
+
+    
