@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -10,816 +12,1398 @@
         <title>Big Five</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" type="text/css" href= "{% static 'css/main.css' %}">
     </head>
     <body>
-        <h1>Big Five Questionaire</h1>
+            <h1>Big Five Questionaire</h1>
         <hr>
         <form action = "result">
-            I am the life of the party    
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-            <input type = "radio" value=0 name="EXT1" required><br></label>
-
-            <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-            <input type = "radio" value=1 name="EXT1" required><br></label>
-
-            <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-            <input type = "radio" value=2 name="EXT1" required><br></label>    
-            
-            <label class="container" style="display: inline; margin-left: 30px;"> Agree
-            <input type = "radio" value=3 name="EXT1" required><br></label>
-
-            <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-            <input type = "radio" value=4 name="EXT1" required><br></label>
-            
-            I dont talk a lot                
-               <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="EXT2" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="EXT2" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="EXT2" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="EXT2" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="EXT2" required><br></label>
-
-            I feel comfortable around people 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="EXT3" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="EXT3" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="EXT3" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="EXT3" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="EXT3" required><br></label>
-
-            I keep in the background 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="EXT4" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="EXT4" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="EXT4" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="EXT4" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="EXT4" required><br></label>
-
-            I start conversations 
-               <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="EXT5" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="EXT5" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="EXT5" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="EXT5" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="EXT5" required><br></label>
-
-            I have little to say 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="EXT6" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="EXT6" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="EXT6" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="EXT6" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="EXT6" required><br></label>
-
-            I talk to a lot of different people at parties 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="EXT7" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="EXT7" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="EXT7" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="EXT7" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="EXT" required><br></label>
-
-            I dont like to draw attention to myself 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="EXT8" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="EXT8" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="EXT8" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="EXT8" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="EXT8" required><br></label>
-
-            I dont mind being the center of attention 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="EXT9" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="EXT9" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="EXT9" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="EXT9" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="EXT9" required><br></label>
-
-            I am quiet around strangers 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="EXT10" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="EXT10" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="EXT10" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="EXT10" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="EXT10" required><br></label>
-
-            I get stressed out easily 
-                <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="EST1" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="EST1" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="EST1" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="EST1" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="EST1" required><br></label>
-            
-
-            I am relaxed most of the time 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="EST2" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="EST2" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="EST2" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="EST2" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="EST2" required><br></label>
-
-            I worry about things 
-                <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="EST3" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="EST3" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="EST3" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="EST3" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="EST3" required><br></label>
-
-            I seldom feel blue 
-                <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="EST4" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="EST4" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="EST4" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="EST4" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="EST4" required><br></label>
-
-            I am easily disturbed 
-                <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="EST5" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="EST5" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="EST5" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="EST5" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="EST5" required><br></label>
-
-            I get upset easily 
-                <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="EST6" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="EST6" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="EST6" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="EST6" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="EST6" required><br></label>
-
-            I change my mood a lot 
-                <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="EST7" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="EST7" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="EST7" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="EST7" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="EST7" required><br></label>
-
-            I have frequent mood swings 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="EST8" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="EST8" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="EST8" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="EST8" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="EST8" required><br></label>
-            
-            I get irritated easily 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="EST9" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="EST9" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="EST9" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="EST9" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="EST9" required><br></label>
-
-            I often feel blue 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="EST10" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="EST10" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="EST10" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="EST10" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="EST10" required><br></label>
-
-            I feel little concern for others 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="AGR1" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="AGR1" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="AGR1" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="AGR1" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="AGR1" required><br></label>
-
-            I am interested in people 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="AGR2" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="AGR2" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="AGR2" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="AGR2" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="AGR2" required><br></label>
-
-            I insult people 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="AGR3" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="AGR3" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="AGR3" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="AGR3" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="AGR3" required><br></label>
-
-            I sympathize with others feelings 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="AGR4" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="AGR4" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="AGR4" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="AGR4" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="AGR4" required><br></label>
-
-            I am not interested in other peoples problems 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="AGR5" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="AGR5" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="AGR5" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="AGR5" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="AGR5" required><br></label>
-
-            I have a soft heart 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="AGR6" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="AGR6" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="AGR6" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="AGR6" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="AGR6" required><br></label>
-
-            I am not really interested in others 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="AGR7" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="AGR7" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="AGR7" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="AGR7" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="AGR7" required><br></label>
-
-            I take time out for others 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="AGR8" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="AGR8" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="AGR8" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="AGR8" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="AGR8" required><br></label>
-
-            I feel others emotions 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="AGR9" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="AGR9" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="AGR9" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="AGR9" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="AGR9" required><br></label>
-
-            I make people feel at ease 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="AGR10" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="AGR10" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="AGR10" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="AGR10" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="AGR10" required><br></label>
-
-            I am always prepared 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="CSN1" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="CSN1" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="CSN1" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="CSN1" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="CSN1" required><br></label>
-
-            I leave my belongings around 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="CSN2" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="CSN2" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="CSN2" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="CSN2" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="CSN2" required><br></label>
-
-            I pay attention to details 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="CSN3" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="CSN3" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="CSN3" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="CSN3" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="CSN3" required><br></label>
-
-            I make a mess of things 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="CSN4" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="CSN4" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="CSN4" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="CSN4" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="CSN4" required><br></label>
-
-            I get chores done right away 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="CSN5" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="CSN5" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="CSN5" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="CSN5" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="CSN5" required><br></label>
+            <h5>1. I am the life of the party</h5>
+            <div id="options_">
+                <h4> Strongly Disagree </h4> 
+                <div id="container__">            
+                    <label>
+                      <input type="radio" class="option-input radio" value=0 name="EXT1" required  />
+                      
+                    </label>
+                    <label>
+                      <input type="radio" class="option-input radio" value=1 name="EXT1" required />
+                      
+                    </label>
+                    <label>
+                      <input type="radio" class="option-input radio" value=2 name="EXT1" required />
+                      
+                    </label>
+                    <label>
+                        <input type="radio" class="option-input radio" value=3 name="EXT1" required />
+                        
+                      </label>
+                      <label>
+                        <input type="radio" class="option-input radio" value=4 name="EXT1" required />
+                        
+                      </label>
+            </div>
+            <h4> Strongly Agree </h4>
+        </div>      
            
-                I often forget to put things back in their proper place 
-                <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                    <input type = "radio" value=0 name="CSN6" required><br></label>
-        
-                    <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                    <input type = "radio" value=1 name="CSN6" required><br></label>
-        
-                    <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                    <input type = "radio" value=2 name="CSN6" required><br></label>    
+         <h5> 2. I dont talk a lot</h5>
+         <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="EXT2" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="EXT2" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="EXT2" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="EXT2" required />
                     
-                    <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                    <input type = "radio" value=3 name="CSN6" required><br></label>
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="EXT2" required />
+                    
+                  </label>
         
-                    <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                    <input type = "radio" value=4 name="CSN6" required><br></label>
-            I like order 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="CSN7" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="CSN7" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="CSN7" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="CSN7" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="CSN7" required><br></label>
-
-            I shirk my duties 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="CSN8" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="CSN8" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="CSN8" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="CSN8" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="CSN8" required><br></label>
-
-            I follow a schedule 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="CSN9" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="CSN9" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="CSN9" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="CSN9" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="CSN9" required><br></label>
-
-            I am exacting in my work 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="CSN10" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="CSN10" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="CSN10" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="CSN10" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="CSN10" required><br></label>
-
-            I have a rich vocabulary 
+        </div>
+        <h4> Strongly Agree </h4>
+    </div>  
+            <h5> 3. I feel comfortable around people</h5>
+            <div id="options_">
+                <h4> Strongly Disagree </h4> 
+                <div id="container__">            
+                    <label>
+                      <input type="radio" class="option-input radio" value=0 name="EXT3" required  />
+                      
+                    </label>
+                    <label>
+                      <input type="radio" class="option-input radio" value=1 name="EXT3" required />
+                      
+                    </label>
+                    <label>
+                      <input type="radio" class="option-input radio" value=2 name="EXT3" required />
+                      
+                    </label>
+                    <label>
+                        <input type="radio" class="option-input radio" value=3 name="EXT3" required />
+                        
+                      </label>
+                      <label>
+                        <input type="radio" class="option-input radio" value=4 name="EXT3" required />
+                        
+                      </label>
+                    </div>
+                    <h4> Strongly Agree </h4>
+            </div>
             
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="OPN1" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="OPN1" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="OPN1" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="OPN1" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="OPN1" required><br></label>
+         <h5> 4. I keep in the background </h5>
+         <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="EXT4" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="EXT4" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="EXT4" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="EXT4" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="EXT4" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+         <h5> 5. I start conversations</h5> 
+         <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="EXT5" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="EXT5" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="EXT5" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="EXT5" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="EXT5" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+        <h5> 6. I have little to say.</h5> 
+        <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="EXT6" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="EXT6" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="EXT6" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="EXT6" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="EXT6" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+         <h5>7. I talk to a lot of different people at parties</h5> 
+         <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="EXT7" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="EXT7" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="EXT7" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="EXT7" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="EXT7" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+         <h5> 8. I dont like to draw attention to myself </h5>
+         <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="EXT8" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="EXT8" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="EXT8" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="EXT8" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="EXT8" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+         <h5>  9. I dont mind being the center of attention </h5>
+         <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="EXT9" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="EXT9" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="EXT9" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="EXT9" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="EXT9" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+         <h5> 10. I am quiet around strangers</h5>
+         <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="EXT10" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="EXT10" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="EXT10" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="EXT10" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="EXT10" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+         <h5> 11. I get stressed out easily</h5> 
+         <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="EST1" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="EST1" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="EST1" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="EST1" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="EST1" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+         <h5> 12. I am relaxed most of the time </h5>
+         <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="EST2" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="EST2" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="EST2" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="EST2" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="EST2" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
 
-            I have difficulty understanding abstract ideas 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="OPN2" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="OPN2" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="OPN2" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="OPN2" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="OPN2" required><br></label>
+         <h5> 13. I worry about things</h5> 
+         <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="EST3" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="EST3" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="EST3" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="EST3" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="EST3" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
 
-            I have a vivid imagination 
-             <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="OPN3" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="OPN3" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="OPN3" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="OPN3" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="OPN3" required><br></label>
+         <h5>  14. I seldom feel blue </h5>
+            <div id="options_">
+                <h4> Strongly Disagree </h4> 
+                <div id="container__">            
+                    <label>
+                      <input type="radio" class="option-input radio" value=0 name="EST4" required  />
+                      
+                    </label>
+                    <label>
+                      <input type="radio" class="option-input radio" value=1 name="EST4" required />
+                      
+                    </label>
+                    <label>
+                      <input type="radio" class="option-input radio" value=2 name="EST4" required />
+                      
+                    </label>
+                    <label>
+                        <input type="radio" class="option-input radio" value=3 name=" EST4" required />
+                        
+                      </label>
+                      <label>
+                        <input type="radio" class="option-input radio" value=4 name=" EST4" required />
+                        
+                      </label>
+                    </div>
+                    <h4> Strongly Agree </h4>
+            </div>
 
-            I am not interested in abstract ideas 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="OPN4" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="OPN4" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="OPN4" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="OPN4" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="OPN4" required><br></label>
+         <h5> 15. I am easily disturbed </h5>
+            <div id="options_">
+                <h4> Strongly Disagree </h4> 
+                <div id="container__">            
+                    <label>
+                      <input type="radio" class="option-input radio" value=0 name=" EST5" required  />
+                      
+                    </label>
+                    <label>
+                      <input type="radio" class="option-input radio" value=1 name=" EST5" required />
+                      
+                    </label>
+                    <label>
+                      <input type="radio" class="option-input radio" value=2 name=" EST5" required />
+                      
+                    </label>
+                    <label>
+                        <input type="radio" class="option-input radio" value=3 name=" EST5" required />
+                        
+                      </label>
+                      <label>
+                        <input type="radio" class="option-input radio" value=4 name=" EST5" required />
+                        
+                      </label>
+                    </div>
+                    <h4> Strongly Agree </h4>
+         </div>
 
-            I have excellent ideas 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="OPN5" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="OPN5" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="OPN5" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="OPN5" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="OPN5" required><br></label>
+         <h5>16. I get upset easily</h5>
+         <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name=" EST6" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name=" EST6" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name=" EST6" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name=" EST6" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name=" EST6" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
 
-            I do not have a good imagination 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="OPN6" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="OPN6" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="OPN6" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="OPN6" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="OPN6" required><br></label>
+         <h5>17. I change my mood a lot </h5>
+         <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name=" EST7" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name=" EST7" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name=" EST7" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name=" EST7" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name=" EST7" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+              
+
+         <h5>18. I have frequent mood swings</h5> 
+         <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name=" EST8" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name=" EST8" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name=" EST8" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name=" EST8" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name=" EST8" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
             
-            I am quick to understand things 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="OPN7" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="OPN7" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="OPN7" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="OPN7" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="OPN7" required><br></label>
-            
-            I use difficult words 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="OPN8" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="OPN8" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="OPN8" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="OPN8" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="OPN8" required><br></label>
-            
-            I spend time reflecting on things 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="OPN9" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="OPN9" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="OPN9" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="OPN9" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="OPN9" required><br></label>
+         <h5>19. I get irritated easily </h5>
+         <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name=" EST9" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name=" EST9" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name=" EST9" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name=" EST9" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name=" EST9" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
 
-            I am full of ideas 
-            <label class="container" style="display: inline; margin-left: 30px;">Strongly disagree
-                <input type = "radio" value=0 name="OPN10" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Disagree
-                <input type = "radio" value=1 name="OPN10" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Neutral
-                <input type = "radio" value=2 name="OPN10" required><br></label>    
-                
-                <label class="container" style="display: inline; margin-left: 30px;"> Agree
-                <input type = "radio" value=3 name="OPN10" required><br></label>
-    
-                <label class="container" style="display: inline; margin-left: 30px;"> Strongly Agree
-                <input type = "radio" value=4 name="OPN10" required><br></label>
+         <h5>20. I often feel blue</h5>
+         <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="EST10" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="EST10" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="EST10" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="EST10" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="EST10" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
 
-            <input type="submit">
+        <h5>   21. I feel little concern for others </h5>
+           <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name=" AGR1" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name=" AGR1" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name=" AGR1" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name=" AGR1" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name=" AGR1" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+
+        <h5>   22. I am interested in people </h5>
+           <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name=" AGR2" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name=" AGR22" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name=" AGR2" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name=" AGR2" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name=" AGR2" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+
+        <h5>   23. I insult people </h5>
+           <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name=" AGR3" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name=" AGR3" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name=" AGR3" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name=" AGR3" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name=" AGR3" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+        <h5>   24. I sympathize with others feelings</h5> 
+           <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name=" AGR4" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name=" AGR4" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name=" AGR4" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name=" AGR4" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name=" AGR4" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+        <h5>   25. I am not interested in other peoples problems </h5>
+           <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name=" AGR5" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name=" AGR5" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name=" AGR5" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name=" AGR5" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name=" AGR5" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+                
+        <h5>   26. I have a soft heart </h5>
+           <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name=" AGR6" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name=" AGR6" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name=" AGR6" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name=" AGR6" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name=" AGR6" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+
+        <h5>   27. I am not really interested in others </h5>
+           <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name=" AGR7" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name=" AGR7" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name=" AGR7" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name=" AGR7" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name=" AGR7" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+
+        <h5>   28. I take time out for others </h5>
+           <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name=" AGR8" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name=" AGR8" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name=" AGR8" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name=" AGR8" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name=" AGR8" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+
+        <h5>   29. I feel others emotions </h5>
+           <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name=" AGR9" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name=" AGR9" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name=" AGR9" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name=" AGR9" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name=" AGR9" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+
+        <h5>   30. I make people feel at ease </h5>
+           <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name=" AGR10" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name=" AGR10" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name=" AGR10" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name=" AGR10" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name=" AGR10" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+
+        <h5>   31. I am always prepared </h5>
+           <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="CSN1" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="CSN1" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="CSN1" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="CSN1" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="CSN1" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+
+        <h5>   32. I leave my belongings around </h5>
+           <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="CSN2" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="CSN2" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="CSN2" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="CSN2" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="CSN2" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+          <h5> 33. I pay attention to details </h5>
+           <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="CSN3" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="CSN3" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="CSN3" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="CSN3" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="CSN3" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+        <h5>   34. I make a mess of things </h5>
+           <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="CSN4" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="CSN4" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="CSN4" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="CSN4" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="CSN4" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+        <h5>   35. I get chores done right away </h5>
+           <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="CSN5" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="CSN5" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="CSN5" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="CSN5" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="CSN5" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+           
+        <h5>   36. I often forget to put things back in their proper place </h5>
+           <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="CSN6" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="CSN6" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="CSN6" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="CSN6" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="CSN6" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+         <h5> 37. I like order </h5>
+          <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="CSN7" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="CSN7" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="CSN7" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="CSN7" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="CSN7" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+        <h5>   38. I shirk my duties </h5>
+           <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="CSN8" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="CSN8" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="CSN8" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="CSN8" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="CSN8" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+        <h5>  39. I follow a schedule </h5>
+          <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="CSN9" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="CSN9" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="CSN9" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="CSN9" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="CSN9" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+
+        <h5>  40. I am exacting in my work </h5>
+          <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="CSN10" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="CSN10" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="CSN10" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="CSN10" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="CSN10" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+        <h5>   41. I have a rich vocabulary </h5>
+          <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="OPN1" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="OPN1" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="OPN1" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="OPN1" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="OPN1" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+
+        <h5>   42. I have difficulty understanding abstract ideas </h5>
+           <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="OPN2" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="OPN2" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="OPN2" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="OPN2" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="OPN2" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+        <h5>  43. I have a vivid imagination </h5>
+           <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="OPN3" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="OPN3" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="OPN3" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="OPN3" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="OPN3" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+
+        <h5>  44. I am not interested in abstract ideas </h5>
+          <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="OPN4" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="OPN4" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="OPN4" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="OPN4" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="OPN4" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+
+        <h5>   45. I have excellent ideas </h5>
+           <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="OPN5" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="OPN5" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="OPN5" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="OPN5" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="OPN5" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+
+        <h5>   46. I do not have a good imagination </h5>
+           <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="OPN6" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="OPN6" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="OPN6" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="OPN6" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="OPN6" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+        <h5>   47. I am quick to understand things </h5>
+           <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="OPN7" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="OPN7" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="OPN7" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="OPN7" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="OPN7" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+        <h5>   48. I use difficult words </h5>
+           <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="OPN8" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="OPN8" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="OPN8" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="OPN8" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="OPN8" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+        <h5>   49. I spend time reflecting on things </h5>
+           <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="OPN9" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="OPN9" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="OPN9" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="OPN9" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="OPN9" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+        <h5>   50. I am full of ideas </h5>
+           <div id="options_">
+            <h4> Strongly Disagree </h4> 
+            <div id="container__">            
+                <label>
+                  <input type="radio" class="option-input radio" value=0 name="OPN10" required  />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=1 name="OPN10" required />
+                  
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value=2 name="OPN10" required />
+                  
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value=3 name="OPN10" required />
+                    
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value=4 name="OPN10" required />
+                    
+                  </label>
+                </div>
+                <h4> Strongly Agree </h4>
+        </div>
+
+         <h5>
+              <button class="button btn" type="submit"  >Submit</button>
+        </h5>
         </form>
         
+        
         <script src="" async defer></script>
+   
     </body>
 </html>

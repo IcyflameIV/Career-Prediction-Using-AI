@@ -1,0 +1,104 @@
+
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+    background-color: rgb(156, 210, 160);
+    color:#fff;
+    
+   
+}
+h1{
+    text-align:center;
+    margin:5% 0 2%;
+    font-family:verdana;
+    font-weight:100;
+}
+h4{
+    margin:2% 8% 2%;
+    font-size: large;
+}
+h5{
+  text-align: center;
+  margin:2% 0 2%;
+  font-size: xx-large;
+}
+   
+#options_{
+    display: flex;
+    margin:2% 0 2%;   
+    }
+
+#container__{
+  position:relative;
+  margin: auto;
+  display: flex;
+  
+}
+
+label{
+      display:flex;
+      padding: 7px;
+      line-height:40px;
+    }
+     .option-input {
+      -o-appearance: none;
+      appearance: none;
+      height: 40px;
+      width: 40px;
+      transition: all 0.15s ease-out 0s;
+      background: #d0d5d2;
+      border: none;
+      color: rgb(46, 88, 49);
+      cursor: pointer;
+      display: inline-block;
+      margin-right: 0.5rem;
+      outline: none;
+      z-index: 1000;
+    }
+    .option-input:hover {
+      background: rgba(35, 67, 38, 0.163);
+    }
+    .option-input:checked {
+      background:rgb(46, 88, 49);
+    }
+    .option-input:checked::before {
+      width: 40px;
+      height: 40px;
+      display:flex;
+      content: '\f00c';
+      font-size: 25px;
+      font-weight:bold;
+      position: absolute;
+      align-items:center;
+      justify-content:center;
+      
+    }
+    .option-input:checked::after {
+      
+      background: #d1ece8;
+      content: '';
+      display: block;
+      position: relative;
+      z-index: 100;
+    }
+    .option-input.radio {
+      border-radius: 50%;
+    }
+    .option-input.radio::after {
+      border-radius: 50%;
+    }
+    
+button {
+      background-color: rgb(46, 88, 49); 
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      transition-duration: 0.4s;
+     align-items: center;
+    }
+#btn {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+    
