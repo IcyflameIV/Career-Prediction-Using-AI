@@ -1,0 +1,42 @@
+
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+    background-color: rgb(156, 210, 160);
+    color:rgb(72, 71, 71);
+    font-family:verdana;
+}
+h1{
+    font-weight:100;
+    margin:5% 25% 2%;
+   
+}
+h2{
+    font-weight:100;
+    margin:2% 30% 2%;
+    font-size: x-large;
+}
+h3{
+  margin:2% 30% 2%;
+  font-weight:100;
+}
+#Container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+}
+button {
+    background-color: rgb(46, 88, 49); 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+   align-items: center;
+   border-radius: 10%;
+  }
+#btn {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -10,20 +11,27 @@
         <title>Result</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" type="text/css" href= "{% static 'css/result.css' %}">
     </head>
     <body>
         <div class='Container'>
-        <h1>YOUR Personality Type is {{result}}</h1>
-        <div class='about_container'>
-            <h3>To know more about {{result}}</h3>
-            <a href=''>Click Here</a>
-        </div>
-        <div class='Career_container'>
-            <h2>Top 10 career suitable for You<h2>
+        <h1>Your Personality Type is {{result}}</h1>
+        <hr>
+        <h2> Top suited career for you are 
               <li>  {{pred1}}</li>
               <li>  {{pred2}}</li>
-              <li>  {{pred3}}</li>
+              <li>  {{pred3}}</li></h2>
+        <div class='about_container'>
+            <h3>
+             <form action='{{path_}}'>
+                <button class=button btn  type="submit" >Learn more about {{result}}</button>
+             </form>
+            </h3>
+        </div>
+        <br>
+        <div class='Career_container'>
+            <h2>Other career choices for you are:<h2>
+            <h3>  
               <li>  {{pred4}}</li>
               <li>  {{pred5}}</li>
               <li>  {{pred6}}</li>
@@ -31,10 +39,8 @@
               <li>  {{pred8}}</li>
               <li>  {{pred9}}</li>
               <li>  {{pred10}}</li>
-        </div>
+            </h3>
 
-        </div>
-
-        <script src="" async defer></script>
+        
     </body>
 </html>
