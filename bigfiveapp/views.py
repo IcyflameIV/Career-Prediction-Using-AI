@@ -9,6 +9,22 @@ def predictor(request):
     return render(request, 'main.html')
 
 
+def EXTinfo(request):
+    return render(request, 'extabout.html')
+
+def ESTinfo(request):
+    return render(request, 'estabout.html')
+
+def AGRinfo(request):
+    return render(request, 'agrabout.html')
+
+def CSNinfo(request):
+    return render(request, 'csnabout.html')
+
+def OPNinfo(request):
+    return render(request, 'opnabout.html')
+
+
 def formInfo(request):
     clf = joblib.load('./savedModels/model.joblib');
     lis = []
@@ -77,6 +93,7 @@ def formInfo(request):
     #                 CSN1,CSN2,CSN3,CSN4,CSN5,CSN6,CSN7,CSN8,CSN9,CSN10,
     #                 OPN1,OPN2,OPN3,OPN4,OPN5,OPN6,OPN7,OPN8,OPN9,OPN10])
     if ans[0]==0:
+        path1=''
         ans = 'EXT'
         val1 = 'eg'
         val2 = 'dd'
@@ -89,6 +106,7 @@ def formInfo(request):
         val9 = ''
         val10 = ''
     elif ans[0]==1:
+        path1=''
         ans = 'EST'
         val1 = 'eg'
         val2 = 'dd'
@@ -101,6 +119,7 @@ def formInfo(request):
         val9 = ''
         val10 = ''
     elif ans[0]==2:
+        path1=''
         ans = 'AGR'
         val1 = 'eg'
         val2 = 'dd'
@@ -113,6 +132,7 @@ def formInfo(request):
         val9 = ''
         val10 = ''
     elif ans[0]==3:
+        path1=''
         ans = 'CSN'
         val1 = 'eg'
         val2 = 'dd'
@@ -125,7 +145,8 @@ def formInfo(request):
         val9 = ''
         val10 = ''
     elif ans[0]==4:
-        ans = 'CSN'
+        path1='OPNinfo'
+        ans = 'OPN'
         val1 = 'eg'
         val2 = 'dd'
         val3 = ''
@@ -142,7 +163,7 @@ def formInfo(request):
        
         
     return render(request, 'result.html',{'result' : ans,
-    'pred1': val1, 'pred2':val2
+    'pred1': val1, 'pred2':val2, 'path_': path1
     })
 
     
