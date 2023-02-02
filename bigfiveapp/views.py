@@ -5,6 +5,14 @@ from django.shortcuts import render
 import joblib
 import numpy as np
 
+
+from pymongo import MongoClient
+# client = MongoClient()
+client = MongoClient('localhost', 27017)
+db = client['BG5DataBase']
+collectionBG = db['BG5Table']
+
+
 def predictor(request):
     return render(request, 'main.html')
 
@@ -24,9 +32,11 @@ def CSNinfo(request):
 def OPNinfo(request):
     return render(request, 'opnabout.html')
 
+clf = joblib.load('./savedModels/model.joblib');
+
 
 def formInfo(request):
-    clf = joblib.load('./savedModels/model.joblib');
+    
     lis = []
     
     lis.append(request.GET['EXT1'])
@@ -87,6 +97,8 @@ def formInfo(request):
     data_array = np.asarray(lis)
     arr= data_array.reshape(1,-1)
     ans = clf.predict(arr)
+    
+
     # output = clf.predict([EXT1,EXT2,EXT3,EXT4,EXT5,EXT6,EXT7,EXT8,EXT9,EXT10,
     #                 EST1,EST2,EST3,EST4,EST5,EST6,EST7,EST8,EST9,EST10,
     #                 AGR1,AGR2,AGR3,AGR4,AGR5,AGR6,AGR7,AGR8,AGR9,AGR10,
@@ -94,7 +106,7 @@ def formInfo(request):
     #                 OPN1,OPN2,OPN3,OPN4,OPN5,OPN6,OPN7,OPN8,OPN9,OPN10])
     if ans[0]==0:
         path1='EXTinfo'
-        ans = 'Extroversion'
+        results = 'Extroversion'
         val1 = 'Engineer'
         val2 = 'Human Resources'
         val3 = 'Sales manager'
@@ -107,7 +119,7 @@ def formInfo(request):
         val10 = 'Therapist'
     elif ans[0]==1:
         path1='ESTinfo'
-        ans = 'Neuroticism'
+        result = 'Neuroticism'
         val1 = 'Forensic Psychologist'
         val2 = 'Dentist'
         val3 = 'Stockbroker'
@@ -120,7 +132,7 @@ def formInfo(request):
         val10 = 'Freelance Designer'
     elif ans[0]==2:
         path1='AGRinfo'
-        ans = 'Agreeableness'
+        results  = 'Agreeableness'
         val1 = 'counselor'
         val2 = 'Nurse'
         val3 = 'Non-profit Organisor'
@@ -133,7 +145,7 @@ def formInfo(request):
         val10 = 'special Education Teacher'
     elif ans[0]==3:
         path1='CSNinfo'
-        ans = 'Conscientiousness'
+        results = 'Conscientiousness'
         val1 = 'Doctor'
         val2 = 'Actor'
         val3 = 'Freelance Writer'
@@ -146,7 +158,7 @@ def formInfo(request):
         val10 = 'Data Analyst'
     elif ans[0]==4:
         path1='OPNinfo'
-        ans = 'Openness'
+        results = 'Openness'
         val1 = 'Artist'
         val2 = 'Software Engineer'
         val3 = 'Travel Writer'
@@ -158,11 +170,69 @@ def formInfo(request):
         val9 = 'Interior Designer'
         val10 = 'Lawyer'
     else:
-        ans =  'Error !!! , The data is not entered correctly' 
+        results =  'Error !!! , The data is not entered correctly' 
 
-       
+    
+
+    temp={}
+    temp['EXT1']=request.GET.get('EXT1')
+    temp['EXT2']=request.GET.get('EXT2')
+    temp['EXT3']=request.GET.get('EXT3')
+    temp['EXT4']=request.GET.get('EXT4')
+    temp['EXT5']=request.GET.get('EXT5')
+    temp['EXT6']=request.GET.get('EXT6')
+    temp['EXT7']=request.GET.get('EXT7')
+    temp['EXT8']=request.GET.get('EXT8')
+    temp['EXT9']=request.GET.get('EXT9')
+    temp['EXT10']=request.GET.get('EXT10')
+
+    temp['EST1']=request.GET.get('EST1')
+    temp['EST2']=request.GET.get('EST2')
+    temp['EST3']=request.GET.get('EST3')
+    temp['EST4']=request.GET.get('EST4')
+    temp['EST5']=request.GET.get('EST5')
+    temp['EST6']=request.GET.get('EST6')
+    temp['EST7']=request.GET.get('EST7')
+    temp['EST8']=request.GET.get('EST8')
+    temp['EST9']=request.GET.get('EST9')
+    temp['EST10']=request.GET.get('EST10')
+
+    temp['AGR1']=request.GET.get('AGR1')
+    temp['AGR2']=request.GET.get('AGR2')        
+    temp['AGR3']=request.GET.get('AGR3')
+    temp['AGR4']=request.GET.get('AGR4')
+    temp['AGR5']=request.GET.get('AGR5')        
+    temp['AGR6']=request.GET.get('AGR6')
+    temp['AGR7']=request.GET.get('AGR7')        
+    temp['AGR8']=request.GET.get('AGR8')
+    temp['AGR9']=request.GET.get('AGR9')        
+    temp['AGR10']=request.GET.get('AGR10')
         
-    return render(request, 'result.html',{'result' : ans,
+    temp['CSN1']=request.GET.get('CSN1')
+    temp['CSN2']=request.GET.get('CSN2')
+    temp['CSN3']=request.GET.get('CSN3')
+    temp['CSN4']=request.GET.get('CSN4')
+    temp['CSN5']=request.GET.get('CSN5')
+    temp['CSN6']=request.GET.get('CSN6')
+    temp['CSN7']=request.GET.get('CSN7')
+    temp['CSN8']=request.GET.get('CSN8')
+    temp['CSN9']=request.GET.get('CSN9')
+    temp['CSN10']=request.GET.get('CSN10')
+
+    temp['OPN1']=request.GET.get('OPN1')
+    temp['OPN2']=request.GET.get('OPN2')
+    temp['OPN3']=request.GET.get('OPN3')
+    temp['OPN4']=request.GET.get('OPN4')
+    temp['OPN5']=request.GET.get('OPN5')
+    temp['OPN6']=request.GET.get('OPN6')
+    temp['OPN7']=request.GET.get('OPN7')
+    temp['OPN8']=request.GET.get('OPN8')
+    temp['OPN9']=request.GET.get('OPN9')
+    temp['OPN10']=request.GET.get('OPN10')
+    temp['result']= float(ans[0])
+    collectionBG.insert_one(temp)
+        
+    return render(request, 'result.html',{'result' : results,
     'pred1': val1, 'pred2':val2, 'pred3':val3, 'pred4':val4,
     'pred5':val5, 'pred6':val6, 'pred7':val7, 'pred8':val8, 
     'pred9':val9, 'pred10':val10, 'path_': path1

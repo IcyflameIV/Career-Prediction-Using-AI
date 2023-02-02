@@ -17,7 +17,8 @@
     <body>
             <h1>Big Five Questionaire</h1>
         <hr>
-        <form action = "result">
+        <form method="POST"  action = "result">
+        {% csrf_token %}
             <h5>1. I am the life of the party</h5>
             <div id="options_">
                 <h4> Strongly Disagree </h4> 
