@@ -32,7 +32,7 @@ def CSNinfo(request):
 def OPNinfo(request):
     return render(request, 'opnabout.html')
 
-clf = joblib.load('./savedModels/model.joblib');
+clf = joblib.load('./savedModels/newmodel.joblib');
 
 
 def formInfo(request):
@@ -40,59 +40,44 @@ def formInfo(request):
     lis = []
     
     lis.append(request.GET['EXT1'])
-    lis.append(request.GET['EXT2'])
     lis.append(request.GET['EXT3'])
     lis.append(request.GET['EXT4'])
     lis.append(request.GET['EXT5'])
     lis.append(request.GET['EXT6'])
-    lis.append(request.GET['EXT7'])
-    lis.append(request.GET['EXT8'])
     lis.append(request.GET['EXT9'])
     lis.append(request.GET['EXT10'])
 
     lis.append(request.GET['EST1'])
     lis.append(request.GET['EST2'])
-    lis.append(request.GET['EST3'])
     lis.append(request.GET['EST4'])
     lis.append(request.GET['EST5'])
     lis.append(request.GET['EST6'])
     lis.append(request.GET['EST7'])
-    lis.append(request.GET['EST8'])
     lis.append(request.GET['EST9'])
-    lis.append(request.GET['EST10'])
 
-    lis.append(request.GET['AGR1'])
     lis.append(request.GET['AGR2'])
     lis.append(request.GET['AGR3'])
     lis.append(request.GET['AGR4'])
     lis.append(request.GET['AGR5'])
     lis.append(request.GET['AGR6'])
-    lis.append(request.GET['AGR7'])
-    lis.append(request.GET['AGR8'])
     lis.append(request.GET['AGR8'])
     lis.append(request.GET['AGR10'])
 
     lis.append(request.GET['CSN1'])
-    lis.append(request.GET['CSN2'])
     lis.append(request.GET['CSN3'])
     lis.append(request.GET['CSN4'])
     lis.append(request.GET['CSN5'])
     lis.append(request.GET['CSN6'])
-    lis.append(request.GET['CSN7'])
-    lis.append(request.GET['CSN8'])
     lis.append(request.GET['CSN9'])
     lis.append(request.GET['CSN10'])
 
     lis.append(request.GET['OPN1'])
     lis.append(request.GET['OPN2'])
     lis.append(request.GET['OPN3'])
-    lis.append(request.GET['OPN4'])
     lis.append(request.GET['OPN5'])
-    lis.append(request.GET['OPN6'])
     lis.append(request.GET['OPN7'])
     lis.append(request.GET['OPN8'])
     lis.append(request.GET['OPN9'])
-    lis.append(request.GET['OPN10'])
     
     data_array = np.asarray(lis)
     arr= data_array.reshape(1,-1)
@@ -119,7 +104,7 @@ def formInfo(request):
         val10 = 'Therapist'
     elif ans[0]==1:
         path1='ESTinfo'
-        result = 'Neuroticism'
+        results = 'Neuroticism'
         val1 = 'Forensic Psychologist'
         val2 = 'Dentist'
         val3 = 'Stockbroker'
@@ -176,60 +161,45 @@ def formInfo(request):
 
     temp={}
     temp['EXT1']=request.GET.get('EXT1')
-    temp['EXT2']=request.GET.get('EXT2')
     temp['EXT3']=request.GET.get('EXT3')
     temp['EXT4']=request.GET.get('EXT4')
     temp['EXT5']=request.GET.get('EXT5')
     temp['EXT6']=request.GET.get('EXT6')
-    temp['EXT7']=request.GET.get('EXT7')
-    temp['EXT8']=request.GET.get('EXT8')
     temp['EXT9']=request.GET.get('EXT9')
     temp['EXT10']=request.GET.get('EXT10')
 
     temp['EST1']=request.GET.get('EST1')
     temp['EST2']=request.GET.get('EST2')
-    temp['EST3']=request.GET.get('EST3')
     temp['EST4']=request.GET.get('EST4')
     temp['EST5']=request.GET.get('EST5')
     temp['EST6']=request.GET.get('EST6')
     temp['EST7']=request.GET.get('EST7')
-    temp['EST8']=request.GET.get('EST8')
     temp['EST9']=request.GET.get('EST9')
-    temp['EST10']=request.GET.get('EST10')
 
-    temp['AGR1']=request.GET.get('AGR1')
     temp['AGR2']=request.GET.get('AGR2')        
     temp['AGR3']=request.GET.get('AGR3')
     temp['AGR4']=request.GET.get('AGR4')
     temp['AGR5']=request.GET.get('AGR5')        
-    temp['AGR6']=request.GET.get('AGR6')
-    temp['AGR7']=request.GET.get('AGR7')        
-    temp['AGR8']=request.GET.get('AGR8')
-    temp['AGR9']=request.GET.get('AGR9')        
+    temp['AGR6']=request.GET.get('AGR6')        
+    temp['AGR8']=request.GET.get('AGR8')        
     temp['AGR10']=request.GET.get('AGR10')
         
     temp['CSN1']=request.GET.get('CSN1')
-    temp['CSN2']=request.GET.get('CSN2')
     temp['CSN3']=request.GET.get('CSN3')
     temp['CSN4']=request.GET.get('CSN4')
     temp['CSN5']=request.GET.get('CSN5')
     temp['CSN6']=request.GET.get('CSN6')
-    temp['CSN7']=request.GET.get('CSN7')
-    temp['CSN8']=request.GET.get('CSN8')
     temp['CSN9']=request.GET.get('CSN9')
     temp['CSN10']=request.GET.get('CSN10')
 
     temp['OPN1']=request.GET.get('OPN1')
     temp['OPN2']=request.GET.get('OPN2')
     temp['OPN3']=request.GET.get('OPN3')
-    temp['OPN4']=request.GET.get('OPN4')
     temp['OPN5']=request.GET.get('OPN5')
-    temp['OPN6']=request.GET.get('OPN6')
     temp['OPN7']=request.GET.get('OPN7')
     temp['OPN8']=request.GET.get('OPN8')
     temp['OPN9']=request.GET.get('OPN9')
-    temp['OPN10']=request.GET.get('OPN10')
-    temp['result']= float(ans[0])
+    temp['results']= float(ans[0])
     collectionBG.insert_one(temp)
         
     return render(request, 'result.html',{'result' : results,
