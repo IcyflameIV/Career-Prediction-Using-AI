@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -12,15 +13,26 @@
         </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" type="text/css" href= "{% static 'css/about.css' %}">
     </head>
-    <body style="background-color: red;">
-        <div container=agr">
-            <h1 style:"align items:center; display:flex ">
-            Neuroticism</h1>
-            
+    <body style="background-color: rgba(171, 35, 35, 0.71);">
+        <div class="Container">
+            <h1>Neuroticism</h1>
+            <br>
+            <div class="cont_1">
+              <h1> Key Characteristics of having high Neuroticism factor </h1>
+               <h5>     <strong>tendency toward unstable emotions</strong> </h5>
+                <h3>
+                    <li>Anxious </li>
+                    <li> Unhappy </li>
+                    <li>Prone to negative Emotions </li>
+                </h3>
+            </div>
+            <div class="cont_2">
+
+            </div>
+            </div>
         </div>
-        
         <script src="" async defer></script>
     </body>
 </html>
