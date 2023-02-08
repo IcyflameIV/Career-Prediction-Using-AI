@@ -6,1404 +6,2124 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Big Five</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href= "{% static 'css/main.css' %}">
-    </head>
-    <body>
-            <h1>Big Five Questionaire</h1>
-        <hr>
-        <form action = "result">
-            <h5>1. I am the life of the party</h5>
-            <div id="options_">
-                <h4> Strongly Disagree </h4> 
-                <div id="container__">            
-                    <label>
-                      <input type="radio" class="option-input radio" value=0 name="EXT1" required  />
-                      
-                    </label>
-                    <label>
-                      <input type="radio" class="option-input radio" value=1 name="EXT1" required />
-                      
-                    </label>
-                    <label>
-                      <input type="radio" class="option-input radio" value=2 name="EXT1" required />
-                      
-                    </label>
-                    <label>
-                        <input type="radio" class="option-input radio" value=3 name="EXT1" required />
-                        
-                      </label>
-                      <label>
-                        <input type="radio" class="option-input radio" value=4 name="EXT1" required />
-                        
-                      </label>
-            </div>
-            <h4> Strongly Agree </h4>
-        </div>      
-           
-         <h5> 2. I dont talk a lot</h5>
-         <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="EXT2" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="EXT2" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="EXT2" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="EXT2" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="EXT2" required />
-                    
-                  </label>
-        
-        </div>
-        <h4> Strongly Agree </h4>
-    </div>  
-            <h5> 3. I feel comfortable around people</h5>
-            <div id="options_">
-                <h4> Strongly Disagree </h4> 
-                <div id="container__">            
-                    <label>
-                      <input type="radio" class="option-input radio" value=0 name="EXT3" required  />
-                      
-                    </label>
-                    <label>
-                      <input type="radio" class="option-input radio" value=1 name="EXT3" required />
-                      
-                    </label>
-                    <label>
-                      <input type="radio" class="option-input radio" value=2 name="EXT3" required />
-                      
-                    </label>
-                    <label>
-                        <input type="radio" class="option-input radio" value=3 name="EXT3" required />
-                        
-                      </label>
-                      <label>
-                        <input type="radio" class="option-input radio" value=4 name="EXT3" required />
-                        
-                      </label>
-                    </div>
-                    <h4> Strongly Agree </h4>
-            </div>
-            
-         <h5> 4. I keep in the background </h5>
-         <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="EXT4" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="EXT4" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="EXT4" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="EXT4" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="EXT4" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
-        </div>
-         <h5> 5. I start conversations</h5> 
-         <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="EXT5" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="EXT5" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="EXT5" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="EXT5" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="EXT5" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
-        </div>
-        <h5> 6. I have little to say.</h5> 
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Big Five OCEAN Test</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Big Five Ocean Test</h1>
+    <hr />
+
+    <form method="get" action="result">
+      <div id="question__">
+        <h5>1. I am the life of the party</h5>
         <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="EXT6" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="EXT6" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="EXT6" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="EXT6" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="EXT6" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="EXT1"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="EXT1"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="EXT1"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="EXT1"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="EXT1"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
         </div>
-         <h5>7. I talk to a lot of different people at parties</h5> 
-         <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="EXT7" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="EXT7" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="EXT7" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="EXT7" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="EXT7" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
-        </div>
-         <h5> 8. I dont like to draw attention to myself </h5>
-         <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="EXT8" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="EXT8" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="EXT8" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="EXT8" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="EXT8" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
-        </div>
-         <h5>  9. I dont mind being the center of attention </h5>
-         <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="EXT9" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="EXT9" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="EXT9" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="EXT9" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="EXT9" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
-        </div>
-         <h5> 10. I am quiet around strangers</h5>
-         <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="EXT10" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="EXT10" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="EXT10" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="EXT10" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="EXT10" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
-        </div>
-         <h5> 11. I get stressed out easily</h5> 
-         <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="EST1" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="EST1" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="EST1" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="EST1" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="EST1" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
-        </div>
-         <h5> 12. I am relaxed most of the time </h5>
-         <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="EST2" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="EST2" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="EST2" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="EST2" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="EST2" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
-        </div>
-
-         <h5> 13. I worry about things</h5> 
-         <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="EST3" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="EST3" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="EST3" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="EST3" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="EST3" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
-        </div>
-
-         <h5>  14. I seldom feel blue </h5>
-            <div id="options_">
-                <h4> Strongly Disagree </h4> 
-                <div id="container__">            
-                    <label>
-                      <input type="radio" class="option-input radio" value=0 name="EST4" required  />
-                      
-                    </label>
-                    <label>
-                      <input type="radio" class="option-input radio" value=1 name="EST4" required />
-                      
-                    </label>
-                    <label>
-                      <input type="radio" class="option-input radio" value=2 name="EST4" required />
-                      
-                    </label>
-                    <label>
-                        <input type="radio" class="option-input radio" value=3 name="EST4" required />
-                        
-                      </label>
-                      <label>
-                        <input type="radio" class="option-input radio" value=4 name="EST4" required />
-                        
-                      </label>
-                    </div>
-                    <h4> Strongly Agree </h4>
-              </div>
-        
-         <h5> 15. I am easily disturbed </h5>
-         <div id="options_">
-          <h4> Strongly Disagree </h4> 
-          <div id="container__">            
-              <label>
-                <input type="radio" class="option-input radio" value=0 name="EST5" required  />
-                
-              </label>
-              <label>
-                <input type="radio" class="option-input radio" value=1 name="EST5" required />
-                
-              </label>
-              <label>
-                <input type="radio" class="option-input radio" value=2 name="EST5" required />
-                
-              </label>
-              <label>
-                  <input type="radio" class="option-input radio" value=3 name="EST5" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=4 name="EST5" required />
-                  
-                </label>
-              </div>
-              <h4> Strongly Agree </h4>
       </div>
 
-         <h5>16. I get upset Easily</h5>
-         <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="EST6" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="EST6" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="EST6" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="EST6" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="EST6" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
+      <div id="question__">
+        <h5>2. I feel comfortable around people</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="EXT3"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="EXT3"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="EXT3"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="EXT3"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="EXT3"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
         </div>
+      </div>
+      <div id="question__">
+        <h5>3. I keep in the background</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="EXT4"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="EXT4"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="EXT4"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="EXT4"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="EXT4"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
+        </div>
+      </div>
 
-         <h5>17. I change my mood a lot </h5>
-         <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="EST7" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="EST7" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="EST7" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="EST7" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="EST7" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
+      <div id="question__">
+        <h5>4. I start conversations</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="EXT5"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="EXT5"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="EXT5"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="EXT5"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="EXT5"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
         </div>
-              
+      </div>
 
-         <h5>18. I have frequent mood swings</h5> 
-         <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="EST8" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="EST8" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="EST8" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="EST8" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="EST8" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
+      <div id="question__">
+        <h5>5. I have little to say.</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="EXT6"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="EXT6"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="EXT6"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="EXT6"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="EXT6"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
         </div>
-            
-         <h5>19. I get irritated easily </h5>
-         <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="EST9" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="EST9" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="EST9" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="EST9" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="EST9" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
-        </div>
+      </div>
 
-         <h5>20. I often feel blue</h5>
-         <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="EST10" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="EST10" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="EST10" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="EST10" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="EST10" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
+      <div id="question__">
+        <h5>6. I dont mind being the center of attention</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="EXT9"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="EXT9"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="EXT9"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="EXT9"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="EXT9"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
         </div>
+      </div>
 
-        <h5>   21. I feel little concern for others </h5>
-           <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="AGR1" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="AGR1" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="AGR1" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="AGR1" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="AGR1" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
+      <div id="question__">
+        <h5>7. I am quiet around strangers</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="EXT10"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="EXT10"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="EXT10"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="EXT10"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="EXT10"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
         </div>
+      </div>
 
-        <h5>   22. I am interested in people </h5>
-           <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="AGR2" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="AGR2" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="AGR2" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="AGR2" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="AGR2" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
+      <div id="question__">
+        <h5>8. I get stressed out easily</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="EST1"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="EST1"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="EST1"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="EST1"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="EST1"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
         </div>
+      </div>
+      <div id="question__">
+        <h5>9. I am relaxed most of the time</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="EST2"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="EST2"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="EST2"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="EST2"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="EST2"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
+        </div>
+      </div>
 
-        <h5>   23. I insult people </h5>
-           <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="AGR3" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="AGR3" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="AGR3" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="AGR3" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="AGR3" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
+      <div id="question__">
+        <h5>10. I seldom feel blue</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="EST4"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="EST4"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="EST4"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="EST4"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="EST4"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
         </div>
-        <h5>   24. I sympathize with others feelings</h5> 
-           <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="AGR4" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="AGR4" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="AGR4" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="AGR4" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="AGR4" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
+      </div>
+      <div id="question__">
+        <h5>11. I am easily disturbed</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="EST5"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="EST5"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="EST5"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="EST5"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="EST5"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
         </div>
-        <h5>   25. I am not interested in other peoples problems </h5>
-           <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="AGR5" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="AGR5" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="AGR5" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="AGR5" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="AGR5" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
-        </div>
-                
-        <h5>   26. I have a soft heart </h5>
-           <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="AGR6" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="AGR6" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="AGR6" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="AGR6" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="AGR6" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
-        </div>
+      </div>
 
-        <h5>   27. I am not really interested in others </h5>
-           <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="AGR7" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="AGR7" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="AGR7" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="AGR7" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="AGR7" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
+      <div id="question__">
+        <h5>12. I get upset Easily</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="EST6"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="EST6"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="EST6"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="EST6"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="EST6"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
         </div>
+      </div>
 
-        <h5>   28. I take time out for others </h5>
-           <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="AGR8" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="AGR8" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="AGR8" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="AGR8" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="AGR8" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
+      <div id="question__">
+        <h5>17. I change my mood a lot</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="EST7"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="EST7"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="EST7"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="EST7"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="EST7"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
         </div>
+      </div>
 
-        <h5>   29. I feel others emotions </h5>
-           <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="AGR9" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="AGR9" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="AGR9" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="AGR9" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="AGR9" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
+      <div id="question__">
+        <h5>19. I get irritated easily</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="EST9"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="EST9"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="EST9"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="EST9"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="EST9"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
         </div>
+      </div>
 
-        <h5>   30. I make people feel at ease </h5>
-           <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="AGR10" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="AGR10" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="AGR10" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="AGR10" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="AGR10" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
+      <div id="question__">
+        <h5>22. I am interested in people</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="AGR2"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="AGR2"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="AGR2"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="AGR2"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="AGR2"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
         </div>
+      </div>
 
-        <h5>   31. I am always prepared </h5>
-           <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="CSN1" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="CSN1" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="CSN1" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="CSN1" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="CSN1" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
+      <div id="question__">
+        <h5>23. I insult people</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="AGR3"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="AGR3"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="AGR3"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="AGR3"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="AGR3"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
         </div>
+      </div>
+      <div id="question__">
+        <h5>24. I sympathize with others feelings</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="AGR4"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="AGR4"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="AGR4"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="AGR4"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="AGR4"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
+        </div>
+      </div>
 
-        <h5>   32. I leave my belongings around </h5>
-           <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="CSN2" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="CSN2" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="CSN2" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="CSN2" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="CSN2" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
+      <div id="question__">
+        <h5>25. I am not interested in other peoples problems</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="AGR5"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="AGR5"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="AGR5"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="AGR5"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="AGR5"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
         </div>
-          <h5> 33. I pay attention to details </h5>
-           <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="CSN3" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="CSN3" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="CSN3" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="CSN3" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="CSN3" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
-        </div>
-        <h5>   34. I make a mess of things </h5>
-           <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="CSN4" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="CSN4" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="CSN4" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="CSN4" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="CSN4" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
-        </div>
-        <h5>   35. I get chores done right away </h5>
-           <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="CSN5" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="CSN5" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="CSN5" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="CSN5" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="CSN5" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
-        </div>
-           
-        <h5>   36. I often forget to put things back in their proper place </h5>
-           <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="CSN6" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="CSN6" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="CSN6" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="CSN6" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="CSN6" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
-        </div>
-         <h5> 37. I like order </h5>
-          <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="CSN7" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="CSN7" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="CSN7" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="CSN7" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="CSN7" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
-        </div>
-        <h5>   38. I shirk my duties </h5>
-           <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="CSN8" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="CSN8" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="CSN8" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="CSN8" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="CSN8" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
-        </div>
-        <h5>  39. I follow a schedule </h5>
-          <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="CSN9" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="CSN9" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="CSN9" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="CSN9" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="CSN9" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
-        </div>
+      </div>
 
-        <h5>  40. I am exacting in my work </h5>
-          <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="CSN10" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="CSN10" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="CSN10" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="CSN10" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="CSN10" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
+      <div id="question__">
+        <h5>26. I have a soft heart</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="AGR6"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="AGR6"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="AGR6"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="AGR6"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="AGR6"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
         </div>
-        <h5>   41. I have a rich vocabulary </h5>
-          <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="OPN1" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="OPN1" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="OPN1" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="OPN1" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="OPN1" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
-        </div>
+      </div>
 
-        <h5>   42. I have difficulty understanding abstract ideas </h5>
-           <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="OPN2" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="OPN2" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="OPN2" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="OPN2" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="OPN2" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
+      <div id="question__">
+        <h5>28. I take time out for others</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="AGR8"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="AGR8"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="AGR8"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="AGR8"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="AGR8"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
         </div>
-        <h5>  43. I have a vivid imagination </h5>
-           <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="OPN3" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="OPN3" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="OPN3" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="OPN3" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="OPN3" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
-        </div>
+      </div>
 
-        <h5>  44. I am not interested in abstract ideas </h5>
-          <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="OPN4" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="OPN4" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="OPN4" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="OPN4" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="OPN4" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
+      <div id="question__">
+        <h5>30. I make people feel at ease</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="AGR10"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="AGR10"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="AGR10"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="AGR10"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="AGR10"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
         </div>
+      </div>
 
-        <h5>   45. I have excellent ideas </h5>
-           <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="OPN5" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="OPN5" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="OPN5" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="OPN5" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="OPN5" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
+      <div id="quesiton__">
+        <h5>31. I am always prepared</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="CSN1"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="CSN1"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="CSN1"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="CSN1"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="CSN1"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
         </div>
+      </div>
 
-        <h5>   46. I do not have a good imagination </h5>
-           <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="OPN6" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="OPN6" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="OPN6" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="OPN6" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="OPN6" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
+      <div id="question__">
+        <h5>33. I pay attention to details</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="CSN3"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="CSN3"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="CSN3"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="CSN3"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="CSN3"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
         </div>
-        <h5>   47. I am quick to understand things </h5>
-           <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="OPN7" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="OPN7" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="OPN7" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="OPN7" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="OPN7" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
-        </div>
-        <h5>   48. I use difficult words </h5>
-           <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="OPN8" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="OPN8" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="OPN8" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="OPN8" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="OPN8" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
-        </div>
-        <h5>   49. I spend time reflecting on things </h5>
-           <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="OPN9" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="OPN9" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="OPN9" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="OPN9" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="OPN9" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
-        </div>
-        <h5>   50. I am full of ideas </h5>
-           <div id="options_">
-            <h4> Strongly Disagree </h4> 
-            <div id="container__">            
-                <label>
-                  <input type="radio" class="option-input radio" value=0 name="OPN10" required  />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=1 name="OPN10" required />
-                  
-                </label>
-                <label>
-                  <input type="radio" class="option-input radio" value=2 name="OPN10" required />
-                  
-                </label>
-                <label>
-                    <input type="radio" class="option-input radio" value=3 name="OPN10" required />
-                    
-                  </label>
-                  <label>
-                    <input type="radio" class="option-input radio" value=4 name="OPN10" required />
-                    
-                  </label>
-                </div>
-                <h4> Strongly Agree </h4>
-        </div>
+      </div>
 
-         <h5>
-              <button class="button btn" type="submit"  >Submit</button>
-        </h5>
-        </form>
-        
-        
-        <script src="" async defer></script>
-   
-    </body>
+      <div id="question__">
+        <h5>34. I make a mess of things</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="CSN4"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="CSN4"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="CSN4"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="CSN4"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="CSN4"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="question__">
+        <h5>35. I get chores done right away</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="CSN5"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="CSN5"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="CSN5"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="CSN5"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="CSN5"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="question__">
+        <h5>36. I often forget to put things back in their proper place</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="CSN6"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="CSN6"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="CSN6"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="CSN6"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="CSN6"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="question__">
+        <h5>39. I follow a schedule</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="CSN9"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="CSN9"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="CSN9"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="CSN9"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="CSN9"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
+        </div>
+      </div>
+      <div id="question__">
+        <h5>40. I am exacting in my work</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="CSN10"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="CSN10"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="CSN10"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="CSN10"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="CSN10"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
+        </div>
+      </div>
+      <div id="question__">
+        <h5>41. I have a rich vocabulary</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="OPN1"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="OPN1"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="OPN1"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="OPN1"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="OPN1"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="question__">
+        <h5>42. I have difficulty understanding abstract ideas</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="OPN2"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="OPN2"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="OPN2"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="OPN2"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="OPN2"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="question__">
+        <h5>43. I have a vivid imagination</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="OPN3"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="OPN3"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="OPN3"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="OPN3"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="OPN3"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="question__">
+        <h5>45. I have excellent ideas</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="OPN5"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="OPN5"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="OPN5"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="OPN5"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="OPN5"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="question__">
+        <h5>47. I am quick to understand things</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="OPN7"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="OPN7"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="OPN7"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="OPN7"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="OPN7"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="quesiton__">
+        <h5>48. I use difficult words</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="OPN8"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="OPN8"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="OPN8"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="OPN8"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="OPN8"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="question__">
+        <h5>49. I spend time reflecting on things</h5>
+        <div id="options_">
+          <div id="container__">
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="0"
+                name="OPN9"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="1"
+                name="OPN9"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="2"
+                name="OPN9"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="3"
+                name="OPN9"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="option-input radio"
+                value="4"
+                name="OPN9"
+                required
+              />
+            </label>
+          </div>
+          <div id="container__text">
+            <span>Strongly Disagree</span>
+            <span>Slightly Disagree</span>
+            <span>Neutral</span>
+            <span>Slightly Agree</span>
+            <span>Strongly Agree</span>
+          </div>
+        </div>
+      </div>
+
+      <h5>
+        <button class="button btn" type="submit">Submit</button>
+      </h5>
+    </form>
+
+    <script src="" async defer></script>
+  </body>
 </html>

@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #65a4b8;
+    color: #fff;
+    font-family: Roboto;
+  } 
+  h1 {
+    text-align: center;
+    margin: 5% 0 2%;
+    font-weight: 700;
+  }
+  h4 {
+    margin: 2% 8% 2%;
+    font-weight: 200;
+  }
+  body #question__{
+    height: 400px;
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #question__:hover {
+      background-color: #44646a;
+  }
+  h5 {
+    text-align: center;
+    margin: 2% 0 2%;
+    font-size: xx-large;
+  }
+  
+  #options_ {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2% 0 2%;
+  }
+  
+  #container__ {
+    position: relative;
+    width: 550px;
+    max-width: 700px;
+    padding: 5px;
+    margin: 10px 50px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+  }
+  
+  #container__text {
+    font-weight: bold;
+    min-width: 600px;
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  label {
+    display: flex;
+    padding: 7px;
+    line-height: 40px;
+  }
+  .option-input {
+    -o-appearance: none;
+    background-color: #dbe6f3;
+    appearance: none;
+    height: 40px;
+    width: 40px;
+    transition: all 0.15s ease-out 0s;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    outline: none;
+    z-index: 1000;
+  }
+  .option-input:hover {
+    background: #3c91a3;
+  }
+  .option-input:checked {
+    background: #293d41;
+  }
+  .option-input:checked::before {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    content: "\f00c";
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+  }
+  .option-input:checked::after {
+    background: white;
+    content: "";
+    display: block;
+    position: relative;
+    z-index: 100;
+  }
+  .option-input.radio {
+    border-radius: 50%;
+  }
+  .option-input.radio::after {
+    border-radius: 50%;
+  }
+  
+#submit-btn {
+    background-color: #44646a;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    align-items: center;
+  }
+  #btn {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  

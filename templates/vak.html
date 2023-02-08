@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/vak.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>VAK</title>
+</head>
+<body>
+    <h1>VAK Apptitude Test</h1>
+    <hr>
+
+    {% if result %}
+        <h1>Your apptitude is {{result}}</h1>
+    {% endif %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div id="question__">
+            <h5>What is you gender</h5>
+            <div id="options_">
+              <div id="container__">
+                <label>
+                  <input
+                    type="radio"
+                    class="option-input radio"
+                    value="1"
+                    name="q1"
+                    required
+                  />
+                  <span>Male</span>
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    class="option-input radio"
+                    value="0"
+                    name="q1"
+                    required
+                  />
+                  <span>Female</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="question__">
+            <h5>I learn better by reading what the teacher writes on the chalkboard.</h5>
+            <div id="options_">
+              <div id="container__">
+                <label>
+                  <input type="radio" class="option-input radio" value="1" name="q3" required/>
+                  <span>Disagree</span>
+                </label>
+                <label>
+                  <input type="radio" class="option-input radio" value="2" name="q3" required/>
+                  <span>Slightly Disagree</span>
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value="3" name="q3" required/>
+                    <span>Neutral</span>
+                  </label>
+                <label>
+                    <input type="radio" class="option-input radio" value="4" name="q3" required/>
+                    <span>Slightly Agree</span>
+                </label>
+                <label>
+                    <input type="radio" class="option-input radio" value="5" name="q3" required/>
+                    <span>Agree</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="question__">
+            <h5>When I read instructions, I remember them better.</h5>
+            <div id="options_">
+                <div id="container__">
+                  <label>
+                    <input type="radio" class="option-input radio" value="1" name="q4" required/>
+                    <span>Disagree</span>
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value="2" name="q4" required/>
+                    <span>Slightly Disagree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="3" name="q4" required/>
+                      <span>Neutral</span>
+                    </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="4" name="q4" required/>
+                      <span>Slightly Agree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="5" name="q4" required/>
+                      <span>Agree</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="question__">
+            <h5>I understand better when I read instructions.</h5>
+            <div id="options_">
+                <div id="container__">
+                  <label>
+                    <input type="radio" class="option-input radio" value="1" name="q5" required/>
+                    <span>Disagree</span>
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value="2" name="q5" required/>
+                    <span>Slightly Disagree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="3" name="q5" required/>
+                      <span>Neutral</span>
+                    </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="4" name="q5" required/>
+                      <span>Slightly Agree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="5" name="q5" required/>
+                      <span>Agree</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div id="question__">
+            <h5>I learn better by reading than by listening to someone.</h5>
+            <div id="options_">
+                <div id="container__">
+                  <label>
+                    <input type="radio" class="option-input radio" value="1" name="q6" required/>
+                    <span>Disagree</span>
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value="2" name="q6" required/>
+                    <span>Slightly Disagree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="3" name="q6" required/>
+                      <span>Neutral</span>
+                    </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="4" name="q6" required/>
+                      <span>Slightly Agree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="5" name="q6" required/>
+                      <span>Agree</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div id="question__">
+            <h5>I learn more by reading textbooks than by listening to lectures.</h5>
+            <div id="options_">
+                <div id="container__">
+                  <label>
+                    <input type="radio" class="option-input radio" value="1" name="q7" required/>
+                    <span>Disagree</span>
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value="2" name="q7" required/>
+                    <span>Slightly Disagree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="3" name="q7" required/>
+                      <span>Neutral</span>
+                    </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="4" name="q7" required/>
+                      <span>Slightly Agree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="5" name="q7" required/>
+                      <span>Agree</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div id="question__">
+            <h5>When the teacher tells me the instructions I understand better.</h5>
+            <div id="options_">
+                <div id="container__">
+                  <label>
+                    <input type="radio" class="option-input radio" value="1" name="q8" required/>
+                    <span>Disagree</span>
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value="2" name="q8" required/>
+                    <span>Slightly Disagree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="3" name="q8" required/>
+                      <span>Neutral</span>
+                    </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="4" name="q8" required/>
+                      <span>Slightly Agree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="5" name="q8" required/>
+                      <span>Agree</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div id="question__">
+            <h5>When someone tells me how to do something in class, I learn it better.</h5>
+            <div id="options_">
+                <div id="container__">
+                  <label>
+                    <input type="radio" class="option-input radio" value="1" name="q9" required/>
+                    <span>Disagree</span>
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value="2" name="q9" required/>
+                    <span>Slightly Disagree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="3" name="q9" required/>
+                      <span>Neutral</span>
+                    </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="4" name="q9" required/>
+                      <span>Slightly Agree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="5" name="q9" required/>
+                      <span>Agree</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div id="question__">
+            <h5>I remember things I have heard in class better than things I have read.</h5>
+            <div id="options_">
+                <div id="container__">
+                  <label>
+                    <input type="radio" class="option-input radio" value="1" name="q10" required/>
+                    <span>Disagree</span>
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value="2" name="q10" required/>
+                    <span>Slightly Disagree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="3" name="q10" required/>
+                      <span>Neutral</span>
+                    </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="4" name="q10" required/>
+                      <span>Slightly Agree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="5" name="q10" required/>
+                      <span>Agree</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div id="question__">
+            <h5>I learn better in class when the teacher gives a lecture.</h5>
+            <div id="options_">
+                <div id="container__">
+                  <label>
+                    <input type="radio" class="option-input radio" value="1" name="q11" required/>
+                    <span>Disagree</span>
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value="2" name="q11" required/>
+                    <span>Slightly Disagree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="3" name="q11" required/>
+                      <span>Neutral</span>
+                    </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="4" name="q11" required/>
+                      <span>Slightly Agree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="5" name="q11" required/>
+                      <span>Agree</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div id="question__">
+            <h5>I learn better in class when I listen to someone.</h5>
+            <div id="options_">
+                <div id="container__">
+                  <label>
+                    <input type="radio" class="option-input radio" value="1" name="q12" required/>
+                    <span>Disagree</span>
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value="2" name="q12" required/>
+                    <span>Slightly Disagree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="3" name="q12" required/>
+                      <span>Neutral</span>
+                    </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="4" name="q12" required/>
+                      <span>Slightly Agree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="5" name="q12" required/>
+                      <span>Agree</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div id="question__">
+            <h5>I prefer to learn by doing something in class.</h5>
+            <div id="options_">
+                <div id="container__">
+                  <label>
+                    <input type="radio" class="option-input radio" value="1" name="q13" required/>
+                    <span>Disagree</span>
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value="2" name="q13" required/>
+                    <span>Slightly Disagree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="3" name="q13" required/>
+                      <span>Neutral</span>
+                    </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="4" name="q13" required/>
+                      <span>Slightly Agree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="5" name="q13" required/>
+                      <span>Agree</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div id="question__">
+            <h5>When I do things in class, I learn better.</h5>
+            <div id="options_">
+                <div id="container__">
+                  <label>
+                    <input type="radio" class="option-input radio" value="1" name="q14" required/>
+                    <span>Disagree</span>
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value="2" name="q14" required/>
+                    <span>Slightly Disagree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="3" name="q14" required/>
+                      <span>Neutral</span>
+                    </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="4" name="q14" required/>
+                      <span>Slightly Agree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="5" name="q14" required/>
+                      <span>Agree</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div id="question__">
+            <h5>I enjoy learning in class by doing experiments.</h5>
+            <div id="options_">
+                <div id="container__">
+                  <label>
+                    <input type="radio" class="option-input radio" value="1" name="q15" required/>
+                    <span>Disagree</span>
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value="2" name="q15" required/>
+                    <span>Slightly Disagree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="3" name="q15" required/>
+                      <span>Neutral</span>
+                    </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="4" name="q15" required/>
+                      <span>Slightly Agree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="5" name="q15" required/>
+                      <span>Agree</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="question__">
+            <h5>I understand things better in class.</h5>
+            <div id="options_">
+                <div id="container__">
+                  <label>
+                    <input type="radio" class="option-input radio" value="1" name="q16" required/>
+                    <span>Disagree</span>
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value="2" name="q16" required/>
+                    <span>Slightly Disagree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="3" name="q16" required/>
+                      <span>Neutral</span>
+                    </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="4" name="q16" required/>
+                      <span>Slightly Agree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="5" name="q16" required/>
+                      <span>Agree</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div id="question__">
+            <h5>I participate in role-playing in class.</h5>
+            <div id="options_">
+                <div id="container__">
+                  <label>
+                    <input type="radio" class="option-input radio" value="1" name="q17" required/>
+                    <span>Disagree</span>
+                  </label>
+                  <label>
+                    <input type="radio" class="option-input radio" value="2" name="q17" required/>
+                    <span>Slightly Disagree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="3" name="q17" required/>
+                      <span>Neutral</span>
+                    </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="4" name="q17" required/>
+                      <span>Slightly Agree</span>
+                  </label>
+                  <label>
+                      <input type="radio" class="option-input radio" value="5" name="q17" required/>
+                      <span>Agree</span>
+                  </label>
+                </div>
+              </div>
+        </div>
+        
+
+        <input id="submit-btn" type="submit">
+    </form>
+    
+</body>
+</html>

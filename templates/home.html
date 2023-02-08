@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -11,13 +11,65 @@
         <title>Career Guru</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/home.css'%}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+
     </head>
     <body>
        <div class='container'>
-         <div></div>
-       </div>
-        
+         <nav>
+            <!-- <label class="logo">Career Guru</label> -->
+            <img src="{% static '/images/1.png' %}" alt=""/>
+            <h1>Career Guru</h1>
+         </nav>
+         
+         <div class="info-ctn">
+            <div class="ml-ctn">
+            <h1>CAREER SELF ASSESSMENT TOOL</h1>
+               <h2>Want to learn which career is best for you</h2> 
+               <h3>Choose your career using Machine Learning</h3>
+            </div>
+            <div class="quiz-ctn">
+                <div class="quiz">
+                    <div class="quiz-header">
+                        <img src="{% static '/images/4.png' %}" alt=""/>
+                    </div>
+                    <div class="quiz-body">
+                            <p>Find your suitable career using this test.</p>
+                            <form action="big5">
+                                <button class="quiz-btn" type="submit">Take quiz</button>
+                            </form>
+                    </div> 
+                </div>
+            </div>
+            <div class="quiz-ctn">
+                <div class="quiz">
+                    <div class="quiz-body">
+                        <p>Find your suitable career using this test.</p>
+                        <form action="questions">
+                            <button class="quiz-btn" type="submit">Take quiz</button>
+                        </form>
+                    </div>
+                    <div class="quiz-header">
+                        <img src="{% static '/images/3.png' %}" alt=""/>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="quiz-ctn">
+                <div class="quiz">
+                    <div class="quiz-header">
+                        <img src="{% static '/images/5.png' %}" alt=""/>
+                    </div>
+                    <div class="quiz-body">
+                        <p>Find suitable learning type using this test.</p>
+                        <form action="vakpredictor">
+                            <button class="quiz-btn" type="submit">Take quiz</button>
+                        </form>
+             </div>
+        </div>
         <script src="" async defer></script>
     </body>
 </html>

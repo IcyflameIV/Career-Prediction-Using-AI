@@ -1,0 +1,35 @@
+*{margin:0;padding:10px; box-sizing:border-box;}
+body{
+    color:rgb(47, 46, 46);
+    font-family: 'Courier New', Courier, monospace;
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+h1{
+    
+    margin:5% 20% 2%;
+   
+}
+h2{
+    
+    margin:2% 25% 2%;
+    
+   
+}
+h3{
+  margin:2% 25% 2%;
+  font-size: x-large;
+}
+h5{
+    margin:2% 10% 2%;
+    font-size: x-large;
+    font-style: italic;
+    color:beige
+}
+#Container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}

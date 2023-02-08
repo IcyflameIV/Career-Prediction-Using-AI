@@ -1,104 +1,135 @@
-
-*{margin:0;padding:0;box-sizing:border-box;}
-body{
-    background-color: rgb(156, 210, 160);
-    color:rgb(47, 46, 46);;
-    
-   
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-h1{
-    text-align:center;
-    margin:5% 0 2%;
-    font-family:verdana;
-    font-weight:100;
-}
-h4{
-    margin:2% 8% 2%;
-    font-size: large;
-}
-h5{
+body {
+  background-color: #043a52;
+  color: #fff;
+  font-family: Roboto;
+} 
+h1 {
   text-align: center;
-  margin:2% 0 2%;
+  margin: 5% 0 2%;
+  font-weight: 700;
+}
+h4 {
+  margin: 2% 8% 2%;
+  font-weight: 200;
+}
+body #question__{
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#question__:hover {
+    background-color: #ffa600;
+}
+h5 {
+  text-align: center;
+  margin: 2% 0 2%;
   font-size: xx-large;
 }
-   
-#options_{
-    display: flex;
-    margin:2% 0 2%;   
-    }
 
-#container__{
-  position:relative;
-  margin: auto;
+#options_ {
   display: flex;
-  
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 2% 0 2%;
 }
 
-label{
-      display:flex;
-      padding: 7px;
-      line-height:40px;
-    }
-     .option-input {
-      -o-appearance: none;
-      appearance: none;
-      height: 40px;
-      width: 40px;
-      transition: all 0.15s ease-out 0s;
-      background: #d0d5d2;
-      border: none;
-      color: rgb(46, 88, 49);
-      cursor: pointer;
-      display: inline-block;
-      margin-right: 0.5rem;
-      outline: none;
-      z-index: 1000;
-    }
-    .option-input:hover {
-      background: rgba(35, 67, 38, 0.163);
-    }
-    .option-input:checked {
-      background:rgb(46, 88, 49);
-    }
-    .option-input:checked::before {
-      width: 40px;
-      height: 40px;
-      display:flex;
-      content: '\f00c';
-      font-size: 25px;
-      font-weight:bold;
-      position: absolute;
-      align-items:center;
-      justify-content:center;
-      
-    }
-    .option-input:checked::after {
-      
-      background: #d1ece8;
-      content: '';
-      display: block;
-      position: relative;
-      z-index: 100;
-    }
-    .option-input.radio {
-      border-radius: 50%;
-    }
-    .option-input.radio::after {
-      border-radius: 50%;
-    }
-    
+#container__ {
+  position: relative;
+  margin: auto;
+  width: 500px;
+  max-width: 600px;
+  padding: 5px;
+  margin: 8px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#container__text {
+  font-weight: bold;
+  min-width: 650px;
+
+}
+span {
+  margin: 0px 7px;
+}
+
+
+label {
+  display: flex;
+  padding: 7px;
+  line-height: 40px;
+}
+.option-input {
+  -o-appearance: none;
+  background-color: #dbe6f3;
+  appearance: none;
+  height: 40px;
+  width: 40px;
+  transition: all 0.15s ease-out 0s;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  z-index: 1000;
+}
+.option-input:hover {
+  background: #043a52;
+}
+.option-input:checked {
+  background: #9e005d;
+}
+.option-input:checked::before {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  content: "\f00c";
+  font-size: 25px;
+  font-weight: bold;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+.option-input:checked::after {
+  background: white;
+  content: "";
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+.option-input.radio {
+  border-radius: 50%;
+}
+.option-input.radio::after {
+  border-radius: 50%;
+}
+
 button {
-      background-color: rgb(46, 88, 49); 
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      transition-duration: 0.4s;
-     align-items: center;
-    }
+  background-color: #ffa600;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 32px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  align-items: center;
+}
 #btn {
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    }
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+    
     

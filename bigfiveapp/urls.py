@@ -20,4 +20,12 @@ urlpatterns = [
     path('CSNinfo',views.CSNinfo, name = 'CSNinfo'),
     path('OPNinfo',views.OPNinfo, name = 'OPNinfo'),
     path('AGRinfo',views.AGRinfo, name = 'AGRinfo'),
+
+    #mbti
+
+    path('test',views.mbti, name = 'test'),
+    path('big5',views.big5, name = 'big5'),
+    path('personality',views.take_test, name = 'personality'),
+    path('questions',views.take_test, name = 'questions'),
+    path('vakpredictor',views.vakpredictor,name='vakpredictor')
     ]

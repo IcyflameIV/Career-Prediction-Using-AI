@@ -1,29 +1,33 @@
 
-*{margin:0;padding:0;box-sizing:border-box;}
+*{margin:0;padding: 10px;;box-sizing:border-box;}
 body{
     background-color: rgb(156, 210, 160);
     color:rgb(72, 71, 71);
-    font-family:verdana;
+    font-family: 'Courier New', Courier, monospace;
+    display:flex;
+    justify-content: center;
+    text-align: center;
 }
 h1{
     font-weight:100;
-    margin:5% 25% 2%;
+    margin:5% 20% 2%;
+  
    
 }
 h2{
     font-weight:100;
-    margin:2% 30% 2%;
+    margin:2% 25% 2%;
     font-size: x-large;
 }
 h3{
-  margin:2% 30% 2%;
+  margin:2% 25% 2%;
   font-weight:100;
 }
+
 #Container{
     display: flex;
     align-items: center;
     text-align: center;
-
 }
 button {
     background-color: rgb(46, 88, 49); 
