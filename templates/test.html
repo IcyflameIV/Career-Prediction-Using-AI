@@ -24,7 +24,7 @@
             {% csrf_token %}
             {% for q in questions %}
               <div id="question__">
-                <p>{{ q.question }}</p>
+                <h5>{{ q.question }}</h5>
                 <div id="options_">
                   <div id="container__">
                     <label>
@@ -34,7 +34,8 @@
                         value="a"
                         name='{{ q.question}}'
                         required
-                      />{{q.a}}
+                      />
+                      <span>{{q.a}}</span>
                     </label>
                     <label>
                       <input
@@ -43,14 +44,15 @@
                         value="b"
                         name='{{ q.question}}'
                         required
-                      />{{q.b}}
+                      />
+                      <span>{{q.b}}</span>
                     </label>
                   </div>
                 </div>
               </div>
             {% endfor %}
            <h5>
-            <button class="button btn" type="submit">Submit</button>
+            <button class="btn" type="submit">Submit</button>
            </h5>
           </form>
       </body>

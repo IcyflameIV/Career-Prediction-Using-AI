@@ -112,7 +112,7 @@
     border-radius: 50%;
   }
   
-#submit-btn {
+.btn {
     background-color: #44646a;
     border: none;
     border-radius: 5px;
@@ -124,7 +124,7 @@
     transition-duration: 0.4s;
     align-items: center;
   }
-  #btn {
+  .btn {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   

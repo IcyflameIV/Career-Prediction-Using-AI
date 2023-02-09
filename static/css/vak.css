@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
   body {
-    background-color: #65a4b8;
+    background-color: #9EBC9F;
     color: #fff;
     font-family: Roboto;
   } 
@@ -27,7 +27,7 @@
   }
   
   #question__:hover {
-      background-color: #44646a;
+      background-color: #D3B88C;
   }
   h5 {
     text-align: center;
@@ -82,10 +82,10 @@
     z-index: 1000;
   }
   .option-input:hover {
-    background: #3c91a3;
+    background: #F4F2F3;
   }
   .option-input:checked {
-    background: #293d41;
+    background: #656256;
   }
   .option-input:checked::before {
     width: 40px;
@@ -113,7 +113,7 @@
   }
   
 #submit-btn {
-    background-color: #44646a;
+    background-color: #656256;
     border: none;
     border-radius: 5px;
     color: white;
