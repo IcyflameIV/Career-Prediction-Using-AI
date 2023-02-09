@@ -46,7 +46,7 @@
   .ml-ctn{
     background-color: #ffa600;
     width: 100%;
-    height: 300px;
+    height: 350px;
     margin: 10px;
     display: flex;
     flex-direction: column;
@@ -77,11 +77,12 @@
   }
   
   .quiz-btn:hover {
-    background-color: #b76302;
+    background-color: #ec9531;
   }
   
   .quiz {
     margin: 20px;
+    height: 400px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 20px rgba(255, 255, 255, 0.336);
@@ -98,6 +99,8 @@
   
   .quiz-header {
     background-color: #f0dfc8;
+    display: flex;
+    align-items: center;
   }
   .quiz-header img {
     width: 100%;
@@ -109,16 +112,27 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
     padding: 20px;
     min-height: 200px;
   }
   
-  .quiz-body p {
+  p {
     margin-top: 5px;
     margin-bottom: 10px;
+    max-width: 300px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   
-  .quiz-body h2 {
-    font-family: Roboto;
-    font-size: 50px;
+  h2,h1,h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  h5{
+    color: rgb(125, 125, 125);
+    margin-bottom: 10px;
   }
