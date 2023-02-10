@@ -6,23 +6,28 @@ body{
     justify-content: center;
     text-align: center;
 }
+li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
 h1{
     
-    margin:5% 20% 2%;
+    margin:5% 5% 2%;
    
 }
 h2{
     
-    margin:2% 25% 2%;
+    margin:2% 5% 2%;
     
    
 }
 h3{
-  margin:2% 25% 2%;
+  margin:2% 5% 2%;
   font-size: x-large;
 }
 h5{
-    margin:2% 10% 2%;
+    margin:2% 2% 2%;
     font-size: x-large;
     font-style: italic;
     color:beige
