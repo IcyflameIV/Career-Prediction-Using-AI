@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> Test Result</title>
+
+  </head>
+  <body>
+    <div class="result-container">
+        <h1>Your Test Result</h1>
+        <div class="personality-type">
+          <h4>Your apptitude is {{result}}.</h4>
+          <hr>
+          <h2>{{tip}}<h2>
+          <hr>
+          <h3>You Learn better {{des}}</h3>
+          <hr>
+          <h4><li>{{tip1}}</li>
+              <li>{{tip2}}</li>
+              <li>{{tip3}}</li>
+          </h4>
+        </div> 
+        <div> 
+          <canvas id="radar-chart" width="300" height="300"></canvas>
+          <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+          <script>
+            var ctx = document.getElementById('radar-chart').getContext('2d');
+            var chart = new Chart(ctx, {
+            type: 'radar',
+            data:{
+            labels:["Visual", "Auditary", "Kinesthetics"],
+            datasets: [{
+              label: 'VAK',
+              data: [{{V}},{{A}},{{K}}],
+              fill: true,
+              backgroundColor: 'rgba(54, 162, 235, 0.2)',
+              borderColor: 'rgba(54, 162, 235, 1)',
+              borderWidth: 2
+                 },{
+                 label: '',
+                 data: [0]
+                    }
+                 ]
+                },
+                options: {
+                  scales: {
+                    pointLabels: {
+                      fontSize: 2
+                    }
+                  }
+                }
+           });
+          </script>
+        </div>        
+    </div>  
+  </body>
+</html>
+
+
+  

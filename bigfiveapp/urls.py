@@ -27,5 +27,7 @@ urlpatterns = [
     path('big5',views.big5, name = 'big5'),
     path('personality',views.take_test, name = 'personality'),
     path('questions',views.take_test, name = 'questions'),
-    path('vakpredictor',views.vakpredictor,name='vakpredictor')
+    path('vakpredictor',views.vakpredictor,name='vakpredictor'),
+    path('radar_chart/', views.radar_chart, name='radar_chart'),
+    
     ]

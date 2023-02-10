@@ -3,6 +3,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import joblib
 import numpy as np
+from django.views.generic import TemplateView
+from chartjs.views.lines import BaseLineChartView
+
 
 #import models
 
@@ -33,6 +36,7 @@ def CSNinfo(request):
 
 def OPNinfo(request):
     return render(request, 'opnabout.html')
+
 
 
 def formInfo(request):
@@ -197,6 +201,12 @@ def vakpredictor(request):
         q17 = request.POST['q17']
 
         y_pred = rf.predict([[q1,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13,q14,q15,q16,q17]])
+       
+        V=int(q3)+int(q4)+int(q5)+int(q6)+int(q7)
+        A=int(q8)+int(q9)+int(q10)+int(q11)+int(q12)
+        K=int(q13)+int(q14)+int(q15)+int(q16)+int(q17)
+        
+       
         if y_pred[0] == 0:
             y_pred = 'Visual'
             des = 'by seeing new information'
@@ -204,29 +214,32 @@ def vakpredictor(request):
             tip1= 'Create your own designs and diagrams for data'
             tip2= 'Minimize visual distractions during class'
             tip3= 'Takes engaging notes'
-        elif y_pred[0] == 1:
+        elif y_pred[0] == 2:
             y_pred = 'Auditary'
             tip= 'Turn up volume'
             des= 'by listening and reading out loud'
             tip1= 'Use headphones for virtual classes'
             tip2= 'Listen to lectures with the screen turned off'
             tip3= 'Read material out loud'
-        else:
-            y_pred = 'Kinesthetic'
+        elif y_pred[0] == 1:
+            y_pred = 'Kinesthetics'
             tip= 'Incorporate activity into classes'
             des= 'through hands-on experience'
             tip1= 'Listen to lectures while walking'
             tip2= 'Use a standing or walking desk at home'
             tip3= 'Keep a fidget toy'
-        return render(request, 'vak.html', {'result' : y_pred, 'des':des, 'tip1' : tip1, 'tip2':tip2, 'tip3': tip3})
+        else:
+            y_pred='not found'
+        return render(request, 'vakresult.html', {'result' : y_pred, 'des':des,'tip':tip, 'tip1' : tip1, 'tip2':tip2, 'tip3': tip3, 'V':V, 'A':A, 'K': K})
     return render(request, 'vak.html')
 
-
+def radar_chart(request):
+    return render(request, 'vakresult.html')
 
 def take_test(request):
   questions = [
         {'question': '1.At a party do you:', 'a': 'Interact with many, including strangers', 'b': 'Interact with a few, known to you'},
-        {'question':  '2.Are you more:' ,'a': 'Realistic than speculative', 'b': 'Speculative than realistic'},
+        {'question': '2.Are you more:' ,'a': 'Realistic than speculative', 'b': 'Speculative than realistic'},
         {'question': '3.Is it worse to:', 'a': 'Have your “head in the clouds”', 'b': 'Be “in a rut”'},
         {'question': '4.Are you more impressed by:', 'a':'Principles', 'b': 'Emotions'},
         {'question': '5.Are more drawn toward the:', 'a': 'Convincing', 'b': 'Touching'},
@@ -400,3 +413,4 @@ def take_test(request):
             personality += 'P '
         return render(request, 'mbtiresult.html', {'personality': personality})
   return render(request, 'test.html', {'questions': questions})
+   
