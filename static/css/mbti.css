@@ -17,6 +17,11 @@
     margin: 2% 8% 2%;
     font-weight: 200;
   }
+  li{
+    margin-top: 10px;
+    margin-left: 30px;
+    font-weight: bold;
+  }
   body #question__{
     height: 400px;
     margin: 20px 0px;

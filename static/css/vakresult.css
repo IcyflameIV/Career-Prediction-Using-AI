@@ -1,13 +1,14 @@
 body {
     font-family: Arial, sans-serif;
     background: #9ebc9f;
+    background-image: linear-gradient(to bottom, #9ebc9f, #a9bc98, #b6bc91, #c4ba8d, #d3b88c);
   }
   
   .result-container {
     max-width: 600px;
     margin: 30px auto;
     padding: 30px;
-    background-color: #fff;
+    background-image: linear-gradient(to bottom, #9ebc9f, #a9bc98, #b6bc91, #c4ba8d, #d3b88c);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   

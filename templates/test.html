@@ -20,6 +20,20 @@
     <body>
         <h1>Myers Briggs Personality Test</h1>
         <hr/>
+        <div class="quiz-step" style="height:300px; display: flex; flex-direction: column; justify-content: center; padding: 30px;">
+          <h3 style="text-align: center;">
+            Before you take the test!
+          </h3>
+          <div class="quiz-step-li" style="display: flex; justify-content: center; align-items:center; margin: 20px;">
+            <ol>
+              <li>It's important to note that there may be multiple valid answers to a question. </li>
+              <li>Kindly respond promptly and in a manner that reflects your unique perspective. </li>
+              <li>Honesty is always the best policy, so please answer truthfully.</li>
+            </ol>
+          </div>
+      </div>
+  
+      <hr/>
         <form action="" method="post" >
             {% csrf_token %}
             {% for q in questions %}

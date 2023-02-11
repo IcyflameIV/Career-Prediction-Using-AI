@@ -15,8 +15,9 @@
   }
   h4 {
     margin: 2% 8% 2%;
-    font-weight: 200;
+    font-weight: bold;
   }
+  
   body #question__{
     height: 400px;
     margin: 20px 0px;

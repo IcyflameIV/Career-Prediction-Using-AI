@@ -1,21 +1,25 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 body {
-  background-color: #043a52;
+  background-color: #0c6489;
   color: #fff;
   font-family: Roboto;
 } 
+
 h1 {
   text-align: center;
   margin: 5% 0 2%;
   font-weight: 700;
 }
 h4 {
-  margin: 2% 8% 2%;
-  font-weight: 200;
+  margin: 2% 25% 2%;
+}
+li{
+  margin-top: 10px;
+  margin-left: 30px;
+  font-weight: bold;
 }
 body #question__{
   height: 400px;
@@ -27,7 +31,7 @@ body #question__{
 }
 
 #question__:hover {
-    background-color: #ffa600;
+    background-color: #fab93f;
 }
 h5 {
   text-align: center;
@@ -87,7 +91,7 @@ label {
   background: #043a52;
 }
 .option-input:checked {
-  background: #9e005d;
+  background: #750145;
 }
 .option-input:checked::before {
   width: 40px;
