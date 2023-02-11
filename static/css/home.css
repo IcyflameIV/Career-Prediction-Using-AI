@@ -11,9 +11,10 @@
   
   nav {
     background: #303030;
-    height: 100px;
+    background-image: linear-gradient(to right, #303030, #252525, #1b1b1b, #111111, #000000);
+    height: 90px;
     width: 100%;
-    position: fixed;
+    position: relative;
     top: 0;
     display: flex;
     flex-direction: row;
@@ -28,7 +29,7 @@
   }
   
   nav img {
-    max-height: 100px;
+    max-height: 90px;
     padding-left: 10px;
   }
   
@@ -39,15 +40,16 @@
   }
   
   .info-ctn {
-    padding-top: 90px;
+    padding-top: 10px;
     background-color: #f0dfc8;
+    background-image: linear-gradient(to top, #f0dfc8, #f0cea2, #efbc7c, #eea957, #ec9531);
   }
   
   .ml-ctn{
-    background-color: #ffa600;
+    background-color: #f7cb7a;
+    background-image: linear-gradient(to bottom, #ffa600, #fdb030, #fbba4b, #f9c263, #f7cb7a);
     width: 100%;
     height: 350px;
-    margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,11 +85,11 @@
   .quiz {
     margin: 20px;
     height: 400px;
-    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 20px rgba(255, 255, 255, 0.336);
     overflow: hidden;
     background-color: #f0dfc8;
+    background-image: linear-gradient(to bottom, #f0dfc8, #f4dbd3, #eddadd, #e2dce0, #dcdcdc);
     display: flex;
     justify-content: space-around;
     flex-direction: row;
