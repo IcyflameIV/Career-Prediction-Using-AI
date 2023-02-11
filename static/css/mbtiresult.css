@@ -8,7 +8,6 @@
     max-width: 600px;
     margin: 30px auto;
     padding: 30px;
-    
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   h1 {
@@ -45,7 +44,7 @@
   }
   body {
     background: rgb(2, 0, 36);
-    background-image: linear-gradient(to top, #043a53, #043045, #042737, #051e2a, #01151e);
+    background-image: linear-gradient(to bottom, #44646a, #4c747c, #54838f, #5c94a3, #65a4b8);
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
@@ -63,7 +62,7 @@
   }
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    height: 200px;
+    height: 80px;
     margin: 10px;
     width: 100vw;
     font-family: arial;
@@ -81,7 +80,7 @@
   
   .card-text {
     font-size: 14px;
-    color: rgb(224, 224, 224);
+    color: rgb(255, 255, 255);
     margin-top: 10px;
   }
   
@@ -112,7 +111,7 @@
   }
   
   button {
-    background-color: #043a52;
+    background-color: #44646a;
     border: none;
     color: white;
     padding: 15px 32px;

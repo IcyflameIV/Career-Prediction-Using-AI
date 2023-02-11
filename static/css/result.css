@@ -15,12 +15,13 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.result-ctn {
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-  padding: 20px;
+.result {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 h1 {
   font-weight: bold;
   margin: 2% 5% 2%;
@@ -64,20 +65,15 @@ h3 {
   margin-top: 10px;
 }
 
-.about-ctn {
-  display: flex;
-  justify-content: center;
-}
-
 .career-ctn {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 10px;
+  margin: 30px auto;
   padding: 2px 16px;
+  width: 100%;
+  font-family: arial;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  font-family: arial;
-  margin: 40px;
-  padding: 20px;
 }
 .career-ctn-list {
   margin: 5px;
@@ -105,4 +101,11 @@ button {
 }
 button:hover {
   background-color: #085d8179;
+}
+
+.about-ctn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
