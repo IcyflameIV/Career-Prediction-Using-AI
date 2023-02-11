@@ -12,44 +12,91 @@
 
   </head>
   <body>
-    <div class="result-container">
-      <h1>Your Personality Test Result</h1>
-      <div class="personality-type">
-        Your personality type is {{personality}}. 
-        <hr>
+    <div class="result">
+      <div class="result-ctn">
+        <div><h1>Your Personality Type is {{personality}}</h1></div>
+        <hr />
         <h1>{{answ}}</h1>
+        <hr/>
+        <div>
+          <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+          <canvas id="polar-area-chart" width="400" height="400"></canvas>
+          <script>
+            var ctx = document.getElementById('polar-area-chart').getContext('2d');
+            var chart = new Chart(ctx, {
+              type: 'polarArea',
+              data: {
+                labels: ['Introvertism', 'Extrovertism', 'Intuition', 'Sensing', 'Thinking','Feeling','Judjing','Preceiving'],
+                datasets: [{
+                  label: 'MBTI breakdown',
+                  data: [ {{CI}},{{CE}},{{CN}},{{CS}},{{CT}},{{CF}},{{CJ}},{{CP}}],
+                  backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 206, 86)',
+                    'rgb(92, 67, 44)',
+                    'rgb(153, 102, 255)',
+                    'rgb(59, 234, 207)',
+                    'rgb(201, 203, 207)',
+                    'rgb(75, 192, 192)',
+                  ]
+                }]
+              },
+              options: {
+                responsive: true,
+                maintainAspectRatio: false
+              }
+            });
+          </script>
+        </div> 
+        <h2><strong> Top suited career for you are </strong></h2>
+        <div class="result-ctn-career">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">{{pred1}}</h4>
+              <p class="card-text">
+                {{des1}}
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">{{pred2}}</h4>
+              <p class="card-text">
+                {{des2}}
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">{{pred3}}</h4>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-        <canvas id="polar-area-chart" width="400" height="400"></canvas>
-        <script>
-          var ctx = document.getElementById('polar-area-chart').getContext('2d');
-          var chart = new Chart(ctx, {
-            type: 'polarArea',
-            data: {
-              labels: ['Introvertism', 'Extrovertism', 'Intuition', 'Sensing', 'Thinking','Feeling','Judjing','Preceiving'],
-              datasets: [{
-                label: 'MBTI breakdown',
-                data: [ {{CI}},{{CE}},{{CN}},{{CS}},{{CT}},{{CF}},{{CJ}},{{CP}}],
-                backgroundColor: [
-                  'rgb(255, 99, 132)',
-                  'rgb(54, 162, 235)',
-                  'rgb(255, 206, 86)',
-                  'rgb(92, 67, 44)',
-                  'rgb(153, 102, 255)',
-                  'rgb(59, 234, 207)',
-                  'rgb(201, 203, 207)',
-                  'rgb(75, 192, 192)',
-                ]
-              }]
-            },
-            options: {
-              responsive: true,
-              maintainAspectRatio: false
-            }
-          });
-        </script>
-      </div> 
+      <div class="about-ctn">
+        <form action="{{path_}}">
+          <button class="button" btn type="submit">
+            Learn more about {{personality}}
+          </button>
+        </form>
+      </div>
+      <div class="career-ctn">
+        <h4 class="career-expand">Other career choices for you are:</h4>
+        <div class="career-ctn-list">
+            <li>{{pred4}}</li>
+            <li>{{pred5}}</li>
+            <li>{{pred6}}</li>
+            <li>{{pred7}}</li>
+            <li>{{pred8}}</li>
+            <li>{{pred9}}</li>
+            <li>{{pred10}}</li>
+        </div>
+      </div>
     </div>
   </body>
 </html>

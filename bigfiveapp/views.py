@@ -334,6 +334,7 @@ def take_test(request):
   count_of_as = 0
   count_of_bs = 0
   personality = ''
+  
 
   if request.method == 'POST':
         answers = []
@@ -349,12 +350,13 @@ def take_test(request):
                 count_of_bs += 1
             else:
                 return HttpResponse("Wrong input")
-
+            
         if count_of_as > count_of_bs:
-             personality += 'E '
+             personality +='E'
         else:
-             personality += 'I '
-        
+             personality +='I'
+        CE= count_of_as/80*100
+        CI= count_of_bs/80*100
         count_of_as = 0
         count_of_bs = 0
 
@@ -365,10 +367,11 @@ def take_test(request):
                 count_of_bs += 1
         
         if count_of_as > count_of_bs:
-            personality += 'S '
+            personality +='S'
         else:
-            personality += 'N '
-        
+            personality +='N'
+        CS= count_of_as/40*100
+        CN= count_of_bs/40*100
         count_of_as = 0
         count_of_bs = 0
 
@@ -379,10 +382,11 @@ def take_test(request):
                 count_of_bs += 1
         
         if count_of_as > count_of_bs:
-            personality += 'T '
+            personality +='T'
         else:
-            personality += 'F '
-        
+            personality +='F'
+        CT= count_of_as/40*100
+        CF= count_of_bs/40*100
         count_of_as = 0
         count_of_bs = 0
 
@@ -393,9 +397,213 @@ def take_test(request):
                 count_of_bs += 1
         
         if count_of_as > count_of_bs:
-            personality += 'J '
+            personality +='J'
         else:
-            personality += 'P '
-        return render(request, 'mbtiresult.html', {'personality': personality})
+            personality +='P'
+        CJ= count_of_as/40*100
+        CP= count_of_bs/40*100
+        
+        if personality == 'ENTP':
+            answ = 'The Debater'
+            val1 = 'Entrepreneur'
+            val2 = 'computer analysts'
+            val3 = 'lawyer'
+            val4 = 'photographer'
+            val5 = 'IT Consultant'
+            val6 = 'actor'
+            val7 = 'marketer'
+            val8 = 'musicians'
+            val9 = 'politicians'
+            val10 = 'scientists'
+        elif personality == 'ENTJ':
+            answ = 'The Commander'
+            val1 = 'CEO'
+            val2 = 'IT Manager'
+            val3 = 'Senior Software Engineer'
+            val4 = 'university professor'
+            val5 = 'Judge'
+            val6 = 'Business executives'
+            val7 = 'Organization founders'
+            val8 = 'Lawyer'
+            val9 = 'System Analysts'
+            val10 = 'Marketing Manager'
+        elif personality == 'ESTJ':
+            answ = 'The Director'
+            val1 = 'Government workers'
+            val2 = 'Information Security Specialist'
+            val3 = 'Sales Representatives'
+            val4 = 'Product Security Engineer'
+            val5 = 'Military'
+            val6 = 'Detective work'
+            val7 = 'Police'
+            val8 = 'Insurance Agent'
+            val9 = 'Trade'
+            val10 = 'Technical teachers'
+        elif personality == 'INTJ':
+            answ = 'a'
+            val1 = ''
+            val2 = ''
+            val3 = ''
+            val4 = ''
+            val5 = ''
+            val6 = ''
+            val7 = ''
+            val8 = ''
+            val9 = ''
+            val10 = ''
+        elif personality == 'INTP':
+            answ = 'a'
+            val1 = ''
+            val2 = ''
+            val3 = ''
+            val4 = ''
+            val5 = ''
+            val6 = ''
+            val7 = ''
+            val8 = ''
+            val9 = ''
+            val10 = ''
+        elif personality == 'ENFJ':
+            answ = 'a'
+            val1 = ''
+            val2 = ''
+            val3 = ''
+            val4 = ''
+            val5 = ''
+            val6 = ''
+            val7 = ''
+            val8 = ''
+            val9 = ''
+            val10 = ''
+        elif personality == 'ISTJ':
+            answ = 'a'
+            val1 = ''
+            val2 = ''
+            val3 = ''
+            val4 = ''
+            val5 = ''
+            val6 = ''
+            val7 = ''
+            val8 = ''
+            val9 = ''
+            val10 = ''
+        elif personality == 'INFJ':
+            answ = 'a'
+            val1 = ''
+            val2 = ''
+            val3 = ''
+            val4 = ''
+            val5 = ''
+            val6 = ''
+            val7 = ''
+            val8 = ''
+            val9 = ''
+            val10 = ''
+        elif personality == 'INFP':
+            answ = 'The Mediator'
+            val1 = 'Artist'
+            val2 = 'Software Developer'
+            val3 = 'Senior Software Engineer'
+            val4 = 'Writers'
+            val5 = 'UX designer'
+            val6 = 'Film Editor'
+            val7 = 'Social Worker'
+            val8 = '3D artist'
+            val9 = 'Librarian'
+            val10 = 'Professor'
+            path ='https://www.16personalities.com/infp-personality'
+        elif personality == 'ENFP':
+            answ = 'a'
+            val1 = ''
+            val2 = ''
+            val3 = ''
+            val4 = ''
+            val5 = ''
+            val6 = ''
+            val7 = ''
+            val8 = ''
+            val9 = ''
+            val10 = ''
+        elif personality == 'ESTP':
+            answ = 'a'
+            val1 = ''
+            val2 = ''
+            val3 = ''
+            val4 = ''
+            val5 = ''
+            val6 = ''
+            val7 = ''
+            val8 = ''
+            val9 = ''
+            val10 = ''
+        elif personality == 'ESFP':
+            answ = 'a'
+            val1 = ''
+            val2 = ''
+            val3 = ''
+            val4 = ''
+            val5 = ''
+            val6 = ''
+            val7 = ''
+            val8 = ''
+            val9 = ''
+            val10 = ''
+        elif personality == 'ESFJ':
+            answ = 'a'
+            val1 = ''
+            val2 = ''
+            val3 = ''
+            val4 = ''
+            val5 = ''
+            val6 = ''
+            val7 = ''
+            val8 = ''
+            val9 = ''
+            val10 = ''
+        elif personality == 'ISTP':
+            answ = 'a'
+            val1 = ''
+            val2 = ''
+            val3 = ''
+            val4 = ''
+            val5 = ''
+            val6 = ''
+            val7 = ''
+            val8 = ''
+            val9 = ''
+            val10 = ''
+        elif personality == 'ISFP':
+            answ = 'a'
+            val1 = ''
+            val2 = ''
+            val3 = ''
+            val4 = ''
+            val5 = ''
+            val6 = ''
+            val7 = ''
+            val8 = ''
+            val9 = ''
+            val10 = ''
+        elif personality == 'ISFJ':
+            answ = 'a'
+            val1 = ''
+            val2 = ''
+            val3 = ''
+            val4 = ''
+            val5 = ''
+            val6 = ''
+            val7 = ''
+            val8 = ''
+            val9 = ''
+            val10 = ''
+        else:
+            answ='b'
+        return render(request, 'mbtiresult.html', {'personality': personality,
+                    'CE':CE, 'CI':CI,'CS':CS,'CN':CN,'CT':CT,'CF':CF,'CJ':CJ,'CP':CP, 
+                    'answ':answ, 'pred1': val1, 'pred2':val2, 'pred3':val3, 'pred4':val4,'pred5':val5, 'pred6':val6,
+                    'pred7':val7, 'pred8':val8, 'pred9':val9, 'pred10':val10, 'path_': path})
   return render(request, 'test.html', {'questions': questions})
+
+  def polar_area_chart(request):
+    return render(request, 'mbtiresult.html')
    
