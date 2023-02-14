@@ -44,7 +44,7 @@
   }
   body {
     background: rgb(2, 0, 36);
-    background-image: linear-gradient(to bottom, #44646a, #4c747c, #54838f, #5c94a3, #65a4b8);
+    background-image: linear-gradient(to top, #73abb5, #6fa9b6, #6ca8b6, #68a6b7, #65a4b8);
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
