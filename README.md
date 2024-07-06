@@ -1,4 +1,3 @@
 
-[Embed]https://nepjol.info/index.php/JACEM/article/view/55947[/Embed]
-
+[10+CAREER+GUIDANCE+SYSTEM+USING+MACHINE+LEARNING-JACEM.docx (2).pdf](https://github.com/user-attachments/files/16115857/10%2BCAREER%2BGUIDANCE%2BSYSTEM%2BUSING%2BMACHINE%2BLEARNING-JACEM.docx.2.pdf)
 
